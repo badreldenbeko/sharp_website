@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block title %}
+    {% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}{{ service.en_name }}{% endif %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'services/css/style.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <!-- header wrapper -->
+    <div class="header-wrapper sm-padding bg-grey">
+        <div class="container">
+            <div class="col-md-6 {% if request.LANGUAGE_CODE == 'ar' %}pull-right{% endif %}">
+                <h2>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
+                    {{ service.en_name }}{% endif %}</h2>
+            </div>
+            <div class="col-6">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'service:list_create' %}">{% trans 'All services' %}</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        {% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
+                            {{ service.en_name }}{% endif %}</li>
+                </ul>
+            </div>
+        </div>
+        {% if request.user.is_authenticated %}
+            <br>
+            <div class="container">
+                <button data-toggle="modal" data-target="#serviceFormModal" class="btn btn-warning"><i
+                        class="fa fa-edit"></i> {% trans 'Edit' %}</button>
+                {% include 'services/service/modal.html' %}
+                <a class="btn btn-danger" href="{% url 'service:delete' service.slug %}"><i
+                        class="fa fa-trash"></i> {% trans 'Delete' %}</a>
+            </div>
+        {% endif %}
+    </div>
+    <!-- /header wrapper -->
+    <!-- Blog -->
+    <div id="blog" class="section md-padding">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- Main -->
+                <main id="main" class="col-md-9">
+                    <div class="blog">
+                        <div class="blog-img"><img class="img-responsive" src="
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                {% if service.image %}{{ service.image.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}"/>
+                        </div>
+                        <div class="blog-content text-justify">
+                            <ul class="blog-meta">
+                                <li><i class="fa fa-clock-o"></i> {{ service.created|timesince }}</li>
+                                <li><i class="fa fa-comments"></i> {{ service.posts.count }}</li>
+                            </ul>
+                            <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
+                                {{ service.en_name }}{% endif %}</h3>
+                            <p>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_description|linebreaks }}{% else %}
+                                {{ service.en_description }}{% endif %}</p>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Aside -->
+                <aside id="aside" class="col-md-3">
+                    <!-- Category -->
+                    <div class="widget">
+                        <h3 class="title"><a href="{% url 'service:list_create' %}">{% trans 'Other Services' %}</a>
+                        </h3>
+                        <div class="widget-category">
+                            {% for service in services %}
+                                <a href="{{ service.get_absolute_url }}">
+                                    {% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
+                                        {{ service.en_name }}{% endif %}<span>{{ service.posts.count }} post{{ service.posts.count|pluralize }}</span></a>
+                            {% empty %}
+                                {% trans 'No other services' %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="row">
+                {% if request.user.is_authenticated %}
+                    <br>
+                    <div class="container">
+                        <button data-toggle="modal" data-target="#postFormModal" class="btn btn-primary"><i
+                                class="fa fa-edit"></i> {% trans 'Add post' %}</button>
+                        {% include 'services/post/modal.html' %}
+                    </div><br>
+                {% endif %}
+                {% for post in service.posts.all %}
+                    <!-- blog author -->
+                    <div class="blog-author">
+
+                        <div class="media" style="background: #F4F4F4;">
+                            {% if request.user.is_authenticated %}
+                                <div class="container">
+                                    <a class="btn btn-danger" href="{% url 'post:post_delete' post.slug %}"><i
+                                            class="fa fa-trash"></i> {% trans 'Delete' %}</a>
+                                </div><br>
+                            {% endif %}
+                            <div class="media-left">
+                                {% if post.image %}
+                                    <img style="max-width: 350px;" class="media-object" src="{{ post.image.url }}"
+                                         alt="{{ post.en_title }}">{% endif %}
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading">
+                                    <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_title }}{% else %}
+                                        {{ post.en_title }}{% endif %}</h3>
+                                    <ul class="blog-meta">
+                                        <li><i class="fa fa-clock-o"></i> {{ post.created|timesince }}</li>
+                                    </ul>
+                                </div>
+                                <p>{% if request.LANGUAGE_CODE == 'ar' %}
+                                    {{ post.ar_body|truncatechars:250|linebreaks }}{% else %}
+                                    {{ post.en_body|truncatechars:250|linebreaks }}{% endif %}</p>
+
+                                <a href="{{ post.get_absolute_url }}">{% trans 'Read More' %}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /blog author -->
+                {% empty %}
+                {% endfor %}
+            </div>
+        </div>
+
+        {% include 'services/price/princing_include.html' %}
+{% endblock %}

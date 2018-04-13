@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-09 05:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\home\templates\base.html:9 .\home\templates\base.html:56
+msgid "Sharp4IT"
+msgstr ""
+
+#: .\home\templates\base.html:57
+msgid "We will have the answer to all your inquiries"
+msgstr ""
+
+#: .\home\templates\base.html:59
+msgid "We will arrange your company to control your business resources"
+msgstr ""
+
+#: .\home\templates\home\home.html:6 .\home\templates\includes\nav-bar.html:26
+#: .\home\templates\registration\login.html:27
+msgid "Home"
+msgstr ""
+
+#: .\home\templates\home\home.html:16
+msgid "Why Choose Sharp4IT"
+msgstr ""
+
+#: .\home\templates\home\home.html:18
+msgid ""
+"Sharp4IT is leading a new concept in the market; we are a Technology system "
+"integrator company that offers a wide range of technology to business "
+"consultation services covering the whole business lifecycle. From the company"
+"\"s head office in Cairo-Egypt and a dedicated team of business analysis "
+"experts and technology consultants assisted by marketing and sales "
+"professionals offering an extensive portfolio for private sector corporates, "
+"public sector."
+msgstr ""
+
+#: .\home\templates\home\home.html:110
+#: .\home\templates\includes\nav-bar.html:31
+msgid "Our Services"
+msgstr ""
+
+#: .\home\templates\home\home.html:123
+msgid "Read more"
+msgstr ""
+
+#: .\home\templates\home\home.html:128
+msgid "No services published ..."
+msgstr ""
+
+#: .\home\templates\home\home.html:133
+msgid "All services"
+msgstr ""
+
+#: .\home\templates\home\home.html:160
+msgid "Get in touch"
+msgstr ""
+
+#: .\home\templates\home\home.html:168
+msgid "Phone"
+msgstr ""
+
+#: .\home\templates\home\home.html:178 .\home\templates\home\home.html:198
+msgid "Email"
+msgstr ""
+
+#: .\home\templates\home\home.html:188
+msgid "Address"
+msgstr ""
+
+#: .\home\templates\home\home.html:189
+msgid "47 Haron El Rashed St. - Heliopolies"
+msgstr ""
+
+#: .\home\templates\home\home.html:197
+msgid "Name"
+msgstr ""
+
+#: .\home\templates\home\home.html:199
+msgid "Subject"
+msgstr ""
+
+#: .\home\templates\home\home.html:200
+msgid "Message"
+msgstr ""
+
+#: .\home\templates\home\home.html:201
+msgid "Send message"
+msgstr ""
+
+#: .\home\templates\includes\footer.html:33
+msgid "Copyright © 2018. All Rights Reserved. Sharp4IT"
+msgstr ""
+
+#: .\home\templates\includes\nav-bar.html:28
+msgid "About"
+msgstr ""
+
+#: .\home\templates\includes\nav-bar.html:33
+msgid "All Services"
+msgstr ""
+
+#: .\home\templates\includes\nav-bar.html:41
+msgid "Pricing"
+msgstr ""
+
+#: .\home\templates\includes\nav-bar.html:43
+msgid "Contact Us"
+msgstr ""
+
+#: .\home\templates\includes\nav-bar.html:45
+msgid "Logout"
+msgstr ""
+
+#: .\home\templates\includes\nav-bar.html:48
+#: .\home\templates\registration\login.html:7
+#: .\home\templates\registration\login.html:22
+#: .\home\templates\registration\login.html:33
+msgid "Login"
+msgstr ""
+
+#: .\home\templates\registration\login.html:25
+msgid "Username and password didn\"t match. Please try again."
+msgstr ""
+
+#: .\home\templates\registration\login.html:27
+msgid "Please login or back to "
+msgstr ""

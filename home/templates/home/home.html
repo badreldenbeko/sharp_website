@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Home' %}
+{% endblock %}
+
+{% block content %}
+
+    <!-- why choose us content -->
+    <div id="about" class="section md-padding bg-grey">
+        <div class="container">
+            <div class="col-md-6">
+                <div class="section-header">
+                    <h2 class="title">{% trans 'Why Choose Sharp4IT' %}</h2>
+                </div>
+                <p>{% trans 'Sharp4IT is leading a new concept in the market; we are a Technology system integrator company that offers a wide range of technology to business consultation services covering the whole business lifecycle. From the company"s head office in Cairo-Egypt and a dedicated team of business analysis experts and technology consultants assisted by marketing and sales professionals offering an extensive portfolio for private sector corporates, public sector.' %}</p>
+            </div>
+            <!-- /why choose us content -->
+
+            <!-- About slider -->
+            <div class="col-md-6">
+                <div id="about-slider" class="owl-carousel owl-theme">
+                    <img class="img-responsive" src="{% static 'home/image/about1.jpg' %}" alt="">
+                    <img class="img-responsive" src="{% static 'home/image/about2.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /About slider -->
+
+
+    <!-- Numbers -->
+    <div id="numbers" class="section sm-padding">
+
+        <!-- Background Image -->
+        <div class="bg-img" style="background-image: url('{% static 'home/image/background2.jpg' %}');">
+            <div class="overlay"></div>
+        </div>
+        <!-- /Background Image -->
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- number -->
+                <div class="col-sm-3 col-xs-6">
+                    <div class="number">
+                        <i class="fa fa-users"></i>
+                        <h3 class="white-text"><span class="counter">451</span></h3>
+                        <span class="white-text">Happy clients</span>
+                    </div>
+                </div>
+                <!-- /number -->
+
+                <!-- number -->
+                <div class="col-sm-3 col-xs-6">
+                    <div class="number">
+                        <i class="fa fa-trophy"></i>
+                        <h3 class="white-text"><span class="counter">12</span></h3>
+                        <span class="white-text">Awards won</span>
+                    </div>
+                </div>
+                <!-- /number -->
+
+                <!-- number -->
+                <div class="col-sm-3 col-xs-6">
+                    <div class="number">
+                        <i class="fa fa-coffee"></i>
+                        <h3 class="white-text"><span class="counter">154</span>K</h3>
+                        <span class="white-text">Cups of Coffee</span>
+                    </div>
+                </div>
+                <!-- /number -->
+
+                <!-- number -->
+                <div class="col-sm-3 col-xs-6">
+                    <div class="number">
+                        <i class="fa fa-file"></i>
+                        <h3 class="white-text"><span class="counter">45</span></h3>
+                        <span class="white-text">Projects completed</span>
+                    </div>
+                </div>
+                <!-- /number -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <!-- /Numbers -->
+
+
+    <!-- services -->
+    <div id="services" class="section md-padding">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- Section header -->
+                <div class="section-header text-center">
+                    <h2 class="title">{% trans 'Our Services' %}</h2>
+                </div>
+                <!-- /Section header -->
+                {% for service in published_services|slice:'0:3' %}
+                    <!-- about -->
+                    <div class="col-md-4">
+                        <div class="about">
+                            <i class="fa fa-{% cycle 'columns' 'magic' 'envelope' 'mobile' %}"></i>
+                            <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
+                                {{ service.en_name }}{% endif %}</h3>
+                            <p>{% if request.LANGUAGE_CODE == 'ar' %}
+                                {{ service.ar_description|truncatechars:100|linebreaks }}{% else %}
+                                {{ service.en_description|truncatechars:100|linebreaks }}{% endif %}</p>
+                            <a href="{{ service.get_absolute_url }}">{% trans 'Read more' %}</a>
+                        </div>
+                    </div>
+                    <!-- /about -->
+                {% empty %}
+                    <p class="text-center">{% trans 'No services published ...' %}</p>
+                {% endfor %}
+            </div>
+            <!-- /Row -->
+            <div class="row" style="padding: 30px"><p><a
+                    href="{% url 'service:list_create' %}">{% trans 'All services' %}</a></p></div>
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <!-- /services -->
+
+    {% for service in services %}
+        {% if service.publish_pricing %}
+            <div class="row">
+                {% include 'services/price/princing_include.html' %}
+            </div>
+        {% endif %}
+    {% endfor %}
+
+
+    <!-- Contact -->
+    <div id="contact" class="section md-padding">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- Section-header -->
+                <div class="section-header text-center">
+                    <h2 class="title">{% trans 'Get in touch' %}</h2>
+                </div>
+                <!-- /Section-header -->
+
+                <!-- contact -->
+                <div class="col-sm-4">
+                    <div class="contact">
+                        <i class="fa fa-phone"></i>
+                        <h3>{% trans 'Phone' %}</h3>
+                        <p>010-6676-3323</p>
+                    </div>
+                </div>
+                <!-- /contact -->
+
+                <!-- contact -->
+                <div class="col-sm-4">
+                    <div class="contact">
+                        <i class="fa fa-envelope"></i>
+                        <h3>{% trans 'Email' %}</h3>
+                        <p>info@sharp4it.com</p>
+                    </div>
+                </div>
+                <!-- /contact -->
+
+                <!-- contact -->
+                <div class="col-sm-4">
+                    <div class="contact">
+                        <i class="fa fa-map-marker"></i>
+                        <h3>{% trans 'Address' %}</h3>
+                        <p>{% trans '47 Haron El Rashed St. - Heliopolies' %}</p>
+                    </div>
+                </div>
+                <!-- /contact -->
+
+                <!-- contact form -->
+                <div class="col-md-8 col-md-offset-2">
+                    <form class="contact-form">
+                        <input type="text" class="input" placeholder="{% trans 'Name' %}">
+                        <input type="email" class="input" placeholder="{% trans 'Email' %}">
+                        <input type="text" class="input" placeholder="{% trans 'Subject' %}">
+                        <textarea class="input" placeholder="{% trans 'Message' %}"></textarea>
+                        <button class="main-btn">{% trans 'Send message' %}</button>
+                    </form>
+                </div>
+                <!-- /contact form -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <!-- /Contact -->
+
+{% endblock %}

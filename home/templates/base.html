@@ -1,0 +1,95 @@
+{% load staticfiles %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% trans 'Sharp4IT' %} | {% block title %}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+    {% if request.LANGUAGE_CODE == 'ar' %}
+        <link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'home/css/bootstrap-rtl.min.css' %}">
+    {% endif %}
+    <link rel="stylesheet" href="{% static 'home/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    {% block css %}{% endblock %}
+</head>
+<body>
+{#<div class="container-fluid"#}
+{#     style="padding-top: 10px; border-bottom: 1px solid #81AAFF; color: #81AAFF; position: fixed; z-index: 100000; background: white; width: 100%">#}
+{#    {% get_current_language as LANGUAGE_CODE %}#}
+{#    {% get_available_languages as LANGUAGES %}#}
+{#    {% get_language_info_list for LANGUAGES as languages %}#}
+{#    {% for language in languages %}#}
+{#        <span>#}
+{#            <a class="text-primary" href="/{{ language.code }}">{{ language.name_local }}</a> &nbsp;#}
+{#        </span>#}
+{#    {% endfor %}#}
+{#</div>#}
+<header {% if section == 'home' %}id="home"{% endif %}>
+    {% if section == 'home' %}
+        <!-- Background Image -->
+        <div class="bg-img"
+             style="background-image: url('{% static "home/image/Business-Performance-background.jpg" %}');">
+            <div class="overlay"></div>
+        </div>
+        <!-- /Background Image -->
+    {% endif %}
+
+    {% include 'includes/nav-bar.html' %}
+
+    {% if section == 'home' %}
+        <!-- home wrapper -->
+        <div class="home-wrapper">
+            <div class="container">
+                <div class="row">
+
+                    <!-- home content -->
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="home-content">
+                            <h1 class="white-text">{% trans 'Sharp4IT' %}</h1>
+                            <h3 class="white-text">{% trans 'We will have the answer to all your inquiries' %}
+                            </h3>
+                            <h3 class="white-text">{% trans 'We will arrange your company to control your business resources' %}</h3>
+                            {#                            <button class="white-btn">Get Started!</button>#}
+                            {#                            <button class="main-btn">Learn more</button>#}
+                        </div>
+                    </div>
+                    <!-- /home content -->
+
+                </div>
+            </div>
+        </div>
+        <!-- /home wrapper -->
+    {% endif %}
+
+</header>
+{% block content %}{% endblock %}
+{% include 'includes/footer.html' %}
+<!-- Back to top -->
+<div id="back-to-top"></div>
+<!-- /Back to top -->
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- /Preloader -->
+<script type="text/javascript" src="{% static 'home/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/js/jquery.magnific-popup.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/js/main.js' %}"></script>
+{% block js %}{% endblock %}
+</body>
+</html>

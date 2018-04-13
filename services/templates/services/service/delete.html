@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+    Delete {% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}{{ service.en_name }}{% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="section md-padding bg-grey">
+        <div class="container">
+            <div class="row">
+                <form method="post">
+                    {% csrf_token %}
+                    <h5>{% trans 'Are you sure You want to delete service' %}
+                        {% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
+                            {{ service.en_name }}{% endif %}</h5>
+                    <input class="btn btn-danger" type="submit" value="{% trans 'Delete' %}">
+                    <a class="btn btn-default" href="{{ service.get_absolute_url }}">{% trans 'Cancel' %}</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

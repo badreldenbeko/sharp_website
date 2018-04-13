@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+    {% if request.LANGUAGE_CODE == 'ar' %}{{ price.ar_price_title }}{% else %}{{ price.en_price_title }}{% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="header-wrapper sm-padding bg-grey">
+        <div class="container">
+            <div class="col-md-6 {% if request.LANGUAGE_CODE == 'ar' %}pull-right{% endif %}">
+                <h2>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_price_title }}{% else %}
+                    {{ post.ar_price_title }}{% endif %}</h2>
+            </div>
+            <div class="col-6">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ price.service.get_absolute_url }}">
+                        {% if request.LANGUAGE_CODE == 'ar' %}{{ price.service.ar_name }}{% else %}
+                            {{ price.service.en_name }}{% endif %}</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        {% if request.LANGUAGE_CODE == 'ar' %}{{ price.ar_price_title }}{% else %}
+                            {{ price.en_price_title }}{% endif %}</li>
+                </ul>
+            </div>
+        </div>
+        {% if request.user.is_authenticated %}
+            <br>
+            <div class="container">
+                <button data-toggle="modal" data-target="#priceFormModal" class="btn btn-warning"><i
+                        class="fa fa-edit"></i> {% trans 'Edit' %}</button>
+                {% include 'services/price/modal.html' %}
+                <a class="btn btn-danger" href="{% url 'price:delete' price.slug %}"><i
+                        class="fa fa-trash"></i> {% trans 'Delete' %}</a>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="section md-padding">
+        <div class="container">
+            <h2>{% if request.LANGUAGE_CODE == 'ar' %}{{ price.ar_price_title }}{% else %}
+                {{ price.en_price_title }}{% endif %}</h2>
+            <hr>
+            <p>{% trans 'Price' %} {{ price.price }} {% trans 'LE' %}</p>
+            <p>{% if request.LANGUAGE_CODE == 'ar' %}{{ price.ar_detail|linebreaks }}{% else %}
+                {{ price.en_detail|linebreaks }}{% endif %}</p>
+        </div>
+        <div class="container">
+            <!-- Pricing -->
+            <div id="pricing" class="section md-padding">
+
+                <!-- Container -->
+                <div class="container">
+
+                    <!-- Row -->
+                    <div class="row">
+
+                        <!-- Section header -->
+                        <div class="section-header text-center">
+                            <h2 class="title">{% trans 'Other pricing plan:' %}</h2>
+                        </div>
+                        <!-- /Section header -->
+                        <!-- pricing -->
+                        {% for o_price in other_prices %}
+                            <div class="col-sm-4">
+                                <div class="pricing">
+                                    <div class="price-head">
+                                        <span class="price-title">{% if request.LANGUAGE_CODE == 'ar' %}
+                                            {{ o_price.ar_price_title }}{% else %}
+                                            {{ o_price.en_price_title }}{% endif %}</span>
+                                        <div class="price">
+                                            <h3 style="font-size: 28px">{{ o_price.price }} {% trans 'LE' %}</h3>
+                                        </div>
+                                    </div>
+                                    <div class="price-content">
+                                        {% if request.LANGUAGE_CODE == 'ar' %}
+                                            {{ o_price.ar_detail|linebreaks }}
+                                        {% else %}
+                                            {{ o_price.en_detail|linebreaks }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="price-btn">
+                                        <a class="outline-btn"
+                                           href="{{ o_price.get_absolute_url }}">{% trans 'Details' %}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /pricing -->
+                        {% empty %}
+                            <p>{% trans 'No other pricing plan ...' %}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

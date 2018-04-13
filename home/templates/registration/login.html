@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    {% trans 'Login' %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'home/css/floating-labels.css' %}">
+    <style>
+        #nav.nav-transparent:not(.fixed-nav) .main-nav > li > a {
+            color: #6195FF;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <form class="form-signin" action="." method="post">
+        <div class="text-center mb-4">
+            <h1>{% trans 'Login' %}</h1>
+
+            {% if form.errors %}
+                <p>{% trans 'Username and password didn"t match. Please try again.' %}</p>
+            {% else %}
+                <p>{% trans 'Please login or back to ' %}<a href="{% url 'home:home_page' %}">{% trans 'Home' %}</a></p>
+            {% endif %}
+        </div>
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        <button class="outline-btn btn-block" type="submit">{% trans 'Login' %}</button>
+    </form>
+{% endblock %}

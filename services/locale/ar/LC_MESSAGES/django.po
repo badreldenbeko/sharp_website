@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-09 05:10+0200\n"
+"PO-Revision-Date: 2018-04-04 15:50+0000\n"
+"Last-Translator: b'  <badrelden@sharp4it.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Translated-Using: django-rosetta 0.8.1\n"
+
+#: .\services\templates\services\post\delete.html:14
+#: .\services\templates\services\price\delete.html:14
+#: .\services\templates\services\service\delete.html:14
+msgid "Are you sure You want to delete service"
+msgstr "هل تريد حذف خدمة"
+
+#: .\services\templates\services\post\delete.html:17
+#: .\services\templates\services\post\detail.html:38
+#: .\services\templates\services\price\delete.html:17
+#: .\services\templates\services\price\detail.html:34
+#: .\services\templates\services\service\delete.html:17
+#: .\services\templates\services\service\detail.html:34
+#: .\services\templates\services\service\detail.html:105
+msgid "Delete"
+msgstr "حذف"
+
+#: .\services\templates\services\post\delete.html:19
+#: .\services\templates\services\price\delete.html:19
+#: .\services\templates\services\service\delete.html:18
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: .\services\templates\services\post\detail.html:19
+#: .\services\templates\services\service\detail.html:19
+msgid "All services"
+msgstr "خدمات"
+
+#: .\services\templates\services\post\detail.html:35
+#: .\services\templates\services\price\detail.html:31
+#: .\services\templates\services\service\detail.html:31
+msgid "Edit"
+msgstr "تعديل"
+
+#: .\services\templates\services\post\modal.html:9
+msgid "Post Form"
+msgstr "خبر جديد"
+
+#: .\services\templates\services\post\modal.html:20
+#: .\services\templates\services\price\modal.html:20
+#: .\services\templates\services\service\modal.html:20
+msgid "Close"
+msgstr "اغلاق"
+
+#: .\services\templates\services\post\modal.html:21
+#: .\services\templates\services\price\modal.html:21
+#: .\services\templates\services\service\modal.html:21
+msgid "Save"
+msgstr "حفظ"
+
+#: .\services\templates\services\price\detail.html:44
+msgid "Price"
+msgstr "السعر"
+
+#: .\services\templates\services\price\detail.html:44
+#: .\services\templates\services\price\detail.html:72
+#: .\services\templates\services\price\princing_include.html:33
+msgid "LE"
+msgstr "ج.م"
+
+#: .\services\templates\services\price\detail.html:60
+msgid "Other pricing plan:"
+msgstr "خطط اسعار اخرى:"
+
+#: .\services\templates\services\price\detail.html:83
+#: .\services\templates\services\price\princing_include.html:44
+msgid "Details"
+msgstr "تفصيلات"
+
+#: .\services\templates\services\price\detail.html:89
+msgid "No other pricing plan ..."
+msgstr "لا يوجد خطط اسعار اخرى ..."
+
+#: .\services\templates\services\price\modal.html:9
+msgid "Price Form"
+msgstr "تسعر جديد"
+
+#: .\services\templates\services\price\princing_include.html:14
+msgid "pricing"
+msgstr "التسعير"
+
+#: .\services\templates\services\price\princing_include.html:20
+msgid "Add pricing plan"
+msgstr "اضافة خطة اسعار جديدة"
+
+#: .\services\templates\services\price\princing_include.html:55
+msgid "No pricing add ..."
+msgstr "لا يوجد خطط اسعار"
+
+#: .\services\templates\services\service\detail.html:74
+msgid "Other Services"
+msgstr "خدمات أخرى"
+
+#: .\services\templates\services\service\detail.html:82
+msgid "No other services"
+msgstr "لا يوجد خدمات اخرى معرفة"
+
+#: .\services\templates\services\service\detail.html:93
+msgid "Add post"
+msgstr "اضف خبر"
+
+#: .\services\templates\services\service\detail.html:125
+msgid "Read More"
+msgstr "المزيد"
+
+#: .\services\templates\services\service\list.html:6
+msgid "Services"
+msgstr "خدمات"
+
+#: .\services\templates\services\service\list.html:25
+msgid "Our Services"
+msgstr "خدمات أخرى"
+
+#: .\services\templates\services\service\list.html:28
+msgid "Add Service"
+msgstr "إضافة خدمة"
+
+#: .\services\templates\services\service\modal.html:9
+#, fuzzy
+#| msgid "Services"
+msgid "Service Form"
+msgstr "خدمات"
+
+#~ msgid "Home"
+#~ msgstr "الرئيسية"

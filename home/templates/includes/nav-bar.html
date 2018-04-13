@@ -1,0 +1,69 @@
+{% load staticfiles %}
+{% load i18n %}
+<!-- Nav -->
+<nav id="nav" class="navbar {% if 'home' in request.path %}nav-transparent{% endif %}">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Logo -->
+            <div class="navbar-brand">
+                <a href="{% url 'home:home_page' %}">
+                    <img class="logo" src="{% static 'home/image/logo.png' %}" alt="logo">
+                    <img class="logo-alt img-responsive" src="{% static 'home/image/logo.png' %}" alt="logo">
+                </a>
+            </div>
+            <!-- /Logo -->
+
+            <!-- Collapse nav button -->
+            <div class="nav-collapse">
+                <span></span>
+            </div>
+            <!-- /Collapse nav button -->
+        </div>
+
+        <!--  Main navigation  -->
+        <ul class="main-nav nav navbar-nav navbar-right">
+            <li {% if section == 'home' %}class="active"{% endif %}><a
+                    href="{% if section != 'home' %}/{% endif %}#home">{% trans 'Home' %}</a>
+            </li>
+            <li><a href="{% if section != 'home' %}/{% endif %}#about">{% trans 'About' %}</a>
+            </li>
+            <li class="has-dropdown {% if 'service' in request.path %}active{% endif %}">
+                <a href="{% if section != 'home' %}/{% endif %}#services">{% trans 'Our Services' %}</a>
+                <ul class="dropdown">
+                    <li><a href="{% url 'service:list_create' %}">{% trans 'All Services' %}</a></li>
+                    {% for service in services %}
+                        <li><a href="{{ service.get_absolute_url }}">
+                            {% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
+                                {{ service.en_name }}{% endif %}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li><a href="{% if section != 'home' %}/{% endif %}#pricing">{% trans 'Pricing' %}</a>
+            </li>
+            <li><a href="{% if section != 'home' %}/{% endif %}#contact">{% trans 'Contact Us' %}</a></li>
+            {% if request.user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">{% trans 'Logout' %}</a></li>
+            {% else %}
+                <li {% if 'login' in request.path %}class="active"{% endif %}><a
+                        href="{% url 'login' %}">{% trans 'Login' %}</a></li>
+            {% endif %}
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            <li>
+                {% for language in languages %}
+                    {#                    <select>#}
+                    {#                        <option value="{{ language.code }}"><img src="{% static 'home/image/lang-{{ language.code }}.png' %}"/> </option>#}
+                    {#                    </select>#}
+                    <li>
+                        <a class="text-primary" href="/{{ language.code }}"><img style="max-width: 17px"
+                                                                                 src="/static/home/image/lang-{{ language.code }}.png"/></a>
+                    </li>
+                {% endfor %}
+            </li>
+        </ul>
+        <!-- /Main navigation -->
+
+    </div>
+</nav>
+<!-- /Nav -->

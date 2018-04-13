@@ -1,0 +1,12 @@
+.work .work-link a {
+    background: none;
+    line-height: 40px;
+}
+
+.pricing {
+    min-height: 400px;
+}
+
+.media-body {
+    padding-right: 25px;
+}
