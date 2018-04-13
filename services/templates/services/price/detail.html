@@ -14,6 +14,8 @@
             </div>
             <div class="col-6">
                 <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'service:list_create' %}">{% trans 'All services' %}</a>
+                    </li>
                     <li class="breadcrumb-item"><a href="{{ price.service.get_absolute_url }}">
                         {% if request.LANGUAGE_CODE == 'ar' %}{{ price.service.ar_name }}{% else %}
                             {{ price.service.en_name }}{% endif %}</a>
