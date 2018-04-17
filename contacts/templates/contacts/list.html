@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}
     Contacts
@@ -8,8 +9,89 @@
     <!-- header wrapper -->
     <div class="header-wrapper sm-padding bg-grey">
         <div class="container">
-            <h2>Contact List</h2>
+            <h2>{% trans 'Contacts' %}</h2>
         </div>
     </div>
     <!-- /header wrapper -->
+
+    <!-- Blog -->
+    <div id="blog" class="section md-padding">
+
+        <!-- Container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form method="get" class="form-inline" action=".">
+                        <div class="form-group mb-2">
+                            <input type="text" name="query" placeholder="Search" class="form-control"
+                                   value="{{ request.GET.query }}">
+                            <button class="main-btn btn-sm" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-md-2 text-left">
+                        {% trans 'Filters' %}
+                    </div>
+                    <div class="col-md-1 text-left">
+                        <a href="{% url 'contact:list' %}">{% trans 'All' %}</a>
+                    </div>
+                    <div class="col-md-2 text-left">
+                        <form method="get">
+                            <input type="text" class="hidden" name="replayed" value="1">
+                            <button class="btn-link" type="submit">{% trans 'Replayed' %}</button>
+                        </form>
+                    </div>
+                    <div class="col-md-4 text-left">
+                        <form method="get">
+                            <input type="text" class="hidden" name="not-replayed" value="0">
+                            <button class="btn-link" type="submit">{% trans 'Not replayed' %}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <p class="label label-info">
+                {% if request.LANGUAGE_CODE == 'en' %}{% trans 'Total' %}{% endif %} {{ contacts.count }}
+                {% trans 'Contact' %}{% if request.LANGUAGE_CODE == 'en' %}
+                    {{ contacts.count|pluralize }}{% endif %}</p>
+            <table class="table table-stripped">
+                <thead>
+                <tr>
+                    <th>{% trans 'Name' %}</th>
+                    <th>{% trans 'Email' %}</th>
+                    <th>{% trans 'Subject' %}</th>
+                    <th>{% trans 'Replyed' %}</th>
+                    <th colspan="2">{% trans 'Created from' %}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for contact in contacts %}
+                    <tr>
+                        <td>{{ contact.name }}</td>
+                        <td>{{ contact.email }}</td>
+                        <td>{{ contact.subject }}</td>
+                        <td>{% if contact.replayed %}<i class="fa fa-check-circle text-success"></i>{% else %}
+                            <i class="fa fa-exclamation-circle text-danger"></i>{% endif %}</td>
+                        <td>{{ contact.created | timesince }} {% trans 'Ago' %}</td>
+                        <td>
+                            {% if request.user.is_authenticated %}
+                                <a class="btn btn-danger" href="{% url 'contact:delete' contact.slug %}"><i
+                                        class="fa fa-trash"></i></a>
+                                <a class="btn btn-warning" href="{% url 'contact:edit' contact.slug %}"><i
+                                        class="fa fa-edit"></i></a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="4" class="text-center"><p>{% trans 'There is no contacts...' %}
+                            {% if request.GET.query %}contains with {{ request.GET.query }}
+
+                            {% endif %}</p></td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div><!-- Container -->
 {% endblock %}

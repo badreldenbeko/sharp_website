@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'sharp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
+        'NAME': 'sharp_website',
+        'USER': 'django',
+        'PASSWORD': 'allahh',
     }
 }
 
@@ -159,8 +159,9 @@ PARLER_LANGUAGES = {
     }
 }
 
-EMAIL_HOST = ''
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT =
+EMAIL_HOST = 'mail.sharp4it.com'
+EMAIL_HOST_USER = 'info@sharp4it.com'
+EMAIL_HOST_PASSWORD = 'allahh'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+

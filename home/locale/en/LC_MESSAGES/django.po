@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 10:31+0200\n"
+"POT-Creation-Date: 2018-04-17 13:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,7 +75,7 @@ msgstr ""
 msgid "Phone"
 msgstr ""
 
-#: .\home\templates\home\home.html:178 .\home\templates\home\home.html:198
+#: .\home\templates\home\home.html:178
 msgid "Email"
 msgstr ""
 
@@ -87,19 +87,7 @@ msgstr ""
 msgid "47 Haron El Rashed St. - Heliopolies"
 msgstr ""
 
-#: .\home\templates\home\home.html:197
-msgid "Name"
-msgstr ""
-
-#: .\home\templates\home\home.html:199
-msgid "Subject"
-msgstr ""
-
-#: .\home\templates\home\home.html:200
-msgid "Message"
-msgstr ""
-
-#: .\home\templates\home\home.html:201
+#: .\home\templates\home\home.html:198
 msgid "Send message"
 msgstr ""
 

@@ -12,6 +12,7 @@ class Contact(models.Model):
     email = models.EmailField()
     subject = models.CharField(max_length=250)
     message = models.TextField()
+    replayed = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

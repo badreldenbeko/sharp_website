@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 10:31+0200\n"
+"POT-Creation-Date: 2018-04-17 13:37+0200\n"
 "PO-Revision-Date: 2018-03-31 13:15+0000\n"
 "Last-Translator: b'  <badrelden@sharp4it.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,7 +82,7 @@ msgstr "أتصل بنا"
 msgid "Phone"
 msgstr "تليفون"
 
-#: .\home\templates\home\home.html:178 .\home\templates\home\home.html:198
+#: .\home\templates\home\home.html:178
 msgid "Email"
 msgstr "البريد الالكترونى"
 
@@ -94,19 +94,7 @@ msgstr "العنوان"
 msgid "47 Haron El Rashed St. - Heliopolies"
 msgstr "47 شارع هارون الرشيد - مصر الجديدة"
 
-#: .\home\templates\home\home.html:197
-msgid "Name"
-msgstr "الأسم"
-
-#: .\home\templates\home\home.html:199
-msgid "Subject"
-msgstr "الموضوع"
-
-#: .\home\templates\home\home.html:200
-msgid "Message"
-msgstr "الرسالة"
-
-#: .\home\templates\home\home.html:201
+#: .\home\templates\home\home.html:198
 msgid "Send message"
 msgstr "إرسال"
 
@@ -152,3 +140,12 @@ msgstr "حدث خطأ فى اسم المستخدم او كلمة المرور."
 #: .\home\templates\registration\login.html:27
 msgid "Please login or back to "
 msgstr "برجاء تسجيل الدخول أو العودة إلى "
+
+#~ msgid "Name"
+#~ msgstr "الأسم"
+
+#~ msgid "Subject"
+#~ msgstr "الموضوع"
+
+#~ msgid "Message"
+#~ msgstr "الرسالة"

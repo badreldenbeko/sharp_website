@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+    Edit {{ contact.name }}
+{% endblock %}
+
+{% block content %}
+    <div class="header-wrapper sm-padding bg-grey">
+        <div class="container">
+            <div class="col-md-6">
+                <h2>{% trans 'Contacts' %}</h2>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'contact:list' %}">
+                        {% trans 'All contacts' %}</a>
+                    </li>
+                    <li class="breadcrumb-item active">{{ contact.name }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="blog" class="section md-padding">
+            <h3>{% trans 'Contact' %} {{ contact.name }}</h3>
+            <h3>{% trans 'Email' %} {{ contact.email }}</h3>
+            <p class="text-muted">{% trans 'Created from' %} {{ contact.created|timesince }}</p>
+            <p class="text-muted">{% trans 'Last update' %} {{ contact.updated }}</p>
+            <p>{{ contact.message|linebreaks }}</p>
+            <form method="post">
+                {% csrf_token %}
+                {{ contact_form.as_p }}
+                <button class="main-btn" type="submit">{% trans 'Save' %}</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
