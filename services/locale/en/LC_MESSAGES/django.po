@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-09 05:10+0200\n"
+"POT-Creation-Date: 2018-04-17 10:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,35 +19,36 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\services\templates\services\post\delete.html:14
-#: .\services\templates\services\price\delete.html:14
+#: .\services\templates\services\price\delete.html:15
 #: .\services\templates\services\service\delete.html:14
 msgid "Are you sure You want to delete service"
 msgstr ""
 
 #: .\services\templates\services\post\delete.html:17
 #: .\services\templates\services\post\detail.html:38
-#: .\services\templates\services\price\delete.html:17
-#: .\services\templates\services\price\detail.html:34
+#: .\services\templates\services\price\delete.html:18
+#: .\services\templates\services\price\detail.html:36
 #: .\services\templates\services\service\delete.html:17
-#: .\services\templates\services\service\detail.html:34
-#: .\services\templates\services\service\detail.html:105
+#: .\services\templates\services\service\detail.html:38
+#: .\services\templates\services\service\detail.html:119
 msgid "Delete"
 msgstr ""
 
 #: .\services\templates\services\post\delete.html:19
-#: .\services\templates\services\price\delete.html:19
+#: .\services\templates\services\price\delete.html:20
 #: .\services\templates\services\service\delete.html:18
 msgid "Cancel"
 msgstr ""
 
 #: .\services\templates\services\post\detail.html:19
-#: .\services\templates\services\service\detail.html:19
+#: .\services\templates\services\price\detail.html:17
+#: .\services\templates\services\service\detail.html:23
 msgid "All services"
 msgstr ""
 
 #: .\services\templates\services\post\detail.html:35
-#: .\services\templates\services\price\detail.html:31
-#: .\services\templates\services\service\detail.html:31
+#: .\services\templates\services\price\detail.html:33
+#: .\services\templates\services\service\detail.html:35
 msgid "Edit"
 msgstr ""
 
@@ -67,26 +68,26 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: .\services\templates\services\price\detail.html:44
+#: .\services\templates\services\price\detail.html:46
 msgid "Price"
 msgstr ""
 
-#: .\services\templates\services\price\detail.html:44
-#: .\services\templates\services\price\detail.html:72
+#: .\services\templates\services\price\detail.html:46
+#: .\services\templates\services\price\detail.html:74
 #: .\services\templates\services\price\princing_include.html:33
 msgid "LE"
 msgstr ""
 
-#: .\services\templates\services\price\detail.html:60
+#: .\services\templates\services\price\detail.html:62
 msgid "Other pricing plan:"
 msgstr ""
 
-#: .\services\templates\services\price\detail.html:83
+#: .\services\templates\services\price\detail.html:86
 #: .\services\templates\services\price\princing_include.html:44
 msgid "Details"
 msgstr ""
 
-#: .\services\templates\services\price\detail.html:89
+#: .\services\templates\services\price\detail.html:92
 msgid "No other pricing plan ..."
 msgstr ""
 
@@ -106,19 +107,19 @@ msgstr ""
 msgid "No pricing add ..."
 msgstr ""
 
-#: .\services\templates\services\service\detail.html:74
+#: .\services\templates\services\service\detail.html:88
 msgid "Other Services"
 msgstr ""
 
-#: .\services\templates\services\service\detail.html:82
+#: .\services\templates\services\service\detail.html:96
 msgid "No other services"
 msgstr ""
 
-#: .\services\templates\services\service\detail.html:93
+#: .\services\templates\services\service\detail.html:107
 msgid "Add post"
 msgstr ""
 
-#: .\services\templates\services\service\detail.html:125
+#: .\services\templates\services\service\detail.html:139
 msgid "Read More"
 msgstr ""
 
@@ -130,7 +131,7 @@ msgstr ""
 msgid "Our Services"
 msgstr ""
 
-#: .\services\templates\services\service\list.html:28
+#: .\services\templates\services\service\list.html:30
 msgid "Add Service"
 msgstr ""
 

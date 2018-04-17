@@ -33,3 +33,10 @@ def unique_slug_generator(instance, new_slug=None):
         return unique_slug_generator(instance, new_slug=new_slug)
 
     return slug
+
+
+def upload_location(instance, filename):
+    name = filename.split('.')
+    Klass = str(instance.__class__.__name__)
+    location = '{}/{}/{}.jpg'.format(Klass, instance.slug, name)
+    return location

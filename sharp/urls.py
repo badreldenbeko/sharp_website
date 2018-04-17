@@ -31,6 +31,7 @@ urlpatterns = i18n_patterns(
     path('services/', include('services.services_urls', namespace='service')),
     path('post/', include('services.post_urls', namespace='post')),
     path('price/', include('services.pricing-urls', namespace='price')),
+    path('contact/', include('contacts.urls', namespace='contact')),
     path('', include('home.urls', namespace='home')),
 )
 

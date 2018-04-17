@@ -42,6 +42,7 @@
             </li>
             <li><a href="{% if section != 'home' %}/{% endif %}#contact">{% trans 'Contact Us' %}</a></li>
             {% if request.user.is_authenticated %}
+                <li><a href="{% url 'contact:list' %}">{% trans 'Contacts' %}</a></li>
                 <li><a href="{% url 'logout' %}">{% trans 'Logout' %}</a></li>
             {% else %}
                 <li {% if 'login' in request.path %}class="active"{% endif %}><a

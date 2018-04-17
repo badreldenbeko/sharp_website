@@ -190,15 +190,12 @@
                     </div>
                 </div>
                 <!-- /contact -->
-
                 <!-- contact form -->
                 <div class="col-md-8 col-md-offset-2">
-                    <form class="contact-form">
-                        <input type="text" class="input" placeholder="{% trans 'Name' %}">
-                        <input type="email" class="input" placeholder="{% trans 'Email' %}">
-                        <input type="text" class="input" placeholder="{% trans 'Subject' %}">
-                        <textarea class="input" placeholder="{% trans 'Message' %}"></textarea>
-                        <button class="main-btn">{% trans 'Send message' %}</button>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ contact_form.as_p }}
+                        <button type="submit" class="main-btn">{% trans 'Send message' %}</button>
                     </form>
                 </div>
                 <!-- /contact form -->

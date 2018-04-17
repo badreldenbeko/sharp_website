@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-09 05:10+0200\n"
+"POT-Creation-Date: 2018-04-17 10:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Send message"
 msgstr ""
 
-#: .\home\templates\includes\footer.html:33
+#: .\home\templates\includes\footer.html:34
 msgid "Copyright © 2018. All Rights Reserved. Sharp4IT"
 msgstr ""
 
@@ -124,10 +124,14 @@ msgid "Contact Us"
 msgstr ""
 
 #: .\home\templates\includes\nav-bar.html:45
+msgid "Contacts"
+msgstr ""
+
+#: .\home\templates\includes\nav-bar.html:46
 msgid "Logout"
 msgstr ""
 
-#: .\home\templates\includes\nav-bar.html:48
+#: .\home\templates\includes\nav-bar.html:49
 #: .\home\templates\registration\login.html:7
 #: .\home\templates\registration\login.html:22
 #: .\home\templates\registration\login.html:33

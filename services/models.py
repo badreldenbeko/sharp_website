@@ -2,31 +2,11 @@
 from django.db import models
 from django.db.models.signals import pre_save
 from django.urls import reverse
-from django.utils.text import slugify
 
-from sharp.utls import unique_slug_generator
+from sharp.utls import unique_slug_generator, upload_location
 
 
 # Create your models here.
-def upload_location(instance, filename):
-    name = filename.split('.')
-    Klass = str(instance.__class__.__name__)
-    location = '{}/{}/{}.jpg'.format(Klass, instance.slug, name)
-    return location
-
-
-def create_slug(instance, new_slug=None):
-    slug = slugify(instance.title)
-    if new_slug is not None:
-        slug = new_slug
-    qs = Service.objects.filter(slug=slug).order_by("-id")
-    exists = qs.exists()
-    if exists:
-        new_slug = "%s-%s" % (slug, qs.first().id)
-        return create_slug(instance, new_slug=new_slug)
-    return slug
-
-
 class Service(models.Model):
     en_name = models.CharField(max_length=200)
     ar_name = models.CharField(max_length=200)

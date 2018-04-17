@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # My apps
     'home',
     'services',
+    'contacts',
 ]
 
 MIDDLEWARE = [
@@ -84,9 +85,9 @@ WSGI_APPLICATION = 'sharp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sharp_website',
-        'USER': 'django',
-        'PASSWORD': 'allahh',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
     }
 }
 
@@ -157,3 +158,9 @@ PARLER_LANGUAGES = {
         'hide_untranslated': False
     }
 }
+
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT =
+EMAIL_USE_TLS = True
