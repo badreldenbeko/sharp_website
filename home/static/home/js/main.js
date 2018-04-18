@@ -16,7 +16,7 @@
 
     $('body').scrollspy({
         target: '.logo',
-        _width: '100px'
+        height: '50px'
     });
 
     ///////////////////////////
