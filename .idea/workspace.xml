@@ -54,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/contacts/templates/contacts/list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="39" column="82" lean-forward="false" selection-start-line="39" selection-start-column="82" selection-end-line="39" selection-end-column="82" />
+              <caret line="39" column="97" lean-forward="false" selection-start-line="39" selection-start-column="97" selection-end-line="39" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -656,7 +656,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524095047787</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
+      <created>1524095637958</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1524095637958</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -746,7 +753,8 @@
     <MESSAGE value="Restyling nav bar&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
     <MESSAGE value="With production settings.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
     <MESSAGE value="Restyling nav bar.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restyling nav bar.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
+    <MESSAGE value="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1115,7 +1123,7 @@
     <entry file="file://$PROJECT_DIR$/contacts/templates/contacts/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="39" column="82" lean-forward="false" selection-start-line="39" selection-start-column="82" selection-end-line="39" selection-end-column="82" />
+          <caret line="39" column="97" lean-forward="false" selection-start-line="39" selection-start-column="97" selection-end-line="39" selection-end-column="97" />
           <folding />
         </state>
       </provider>
