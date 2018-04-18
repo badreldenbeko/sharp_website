@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%2x8r%vadfa0$0sj@x-t)9g6n38=al1c5@0$(msf8x%*bw()#v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.sharp4it.com', '212.237.25.27']
 
 # Application definition
 
@@ -86,8 +86,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sharp_website',
-        'USER': 'django',
-        'PASSWORD': 'allahh',
+        'USER': 'root',
+        'PASSWORD': 'Sharp@2016',
     }
 }
 
@@ -159,9 +159,9 @@ PARLER_LANGUAGES = {
     }
 }
 
-EMAIL_HOST = 'mail.sharp.com'
+EMAIL_HOST = 'mail.sharp4it.com'
 EMAIL_HOST_USER = 'info@sharp4it.com'
-EMAIL_HOST_PASSWORD = 'OmarBekobeko'
+EMAIL_HOST_PASSWORD = 'allahh'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
