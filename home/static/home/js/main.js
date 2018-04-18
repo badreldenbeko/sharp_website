@@ -14,11 +14,6 @@
         offset: $(window).height() / 2
     });
 
-    $('body').scrollspy({
-        target: '.logo',
-        height: '50px'
-    });
-
     ///////////////////////////
     // Smooth scroll
     $("#nav .main-nav a[href^='#']").on('click', function (e) {
