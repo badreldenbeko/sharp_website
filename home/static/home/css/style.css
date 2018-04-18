@@ -256,7 +256,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 \*------------------------------------*/
 
 .navbar {
-    /*height: 80px;*/
+    height: 80px;
 }
 
 /*------------------------------------*\
@@ -308,7 +308,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 #nav.navbar {
     border-radius: 0;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
 }
 
 #nav.fixed-nav {
