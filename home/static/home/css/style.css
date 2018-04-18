@@ -308,7 +308,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 #nav.navbar {
     border-radius: 0;
-    /*margin-top: 50px;*/
 }
 
 #nav.fixed-nav {
@@ -1770,4 +1769,8 @@ header {
         -webkit-transform: scale(0);
         transform: scale(0);
     }
+}
+
+.navbar-right {
+    margin-top: 30px;
 }
