@@ -12,6 +12,15 @@
     <style>
         .backg-img {
             background: url("{% static 'home/image/Business-Performance-background.jpg' %}");
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
         }
 
         #nav.nav-transparent:not(.fixed-nav) .main-nav > li > a {
