@@ -55,8 +55,8 @@
             <div class="text-justify col-md-6">
                 <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_title }}{% else %}
                     {{ post.en_title }}{% endif %}</h3>
-                <p>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_body|linebreaks }}{% else %}
-                    {{ post.en_body|linebreaks }}{% endif %}</p>
+                <p>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_body|safe }}{% else %}
+                    {{ post.en_body|safe }}{% endif %}</p>
             </div>
             <br>
         </div>
