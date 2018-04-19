@@ -23,12 +23,13 @@
         <!--  Main navigation  -->
         <ul class="main-nav nav navbar-nav navbar-right">
             <li {% if section == 'home' %}class="active"{% endif %}><a
-                    href="{% if section != 'home' %}/{% endif %}#home">{% trans 'Home' %}</a>
+                    href="{% if section != 'home' %}/{{ request.LANGUAGE_CODE }}/{% endif %}#home">{% trans 'Home' %}</a>
             </li>
-            <li><a href="{% if section != 'home' %}/{% endif %}#about">{% trans 'About' %}</a>
+            <li>
+                <a href="{% if section != 'home' %}/{{ request.LANGUAGE_CODE }}/{% endif %}#about">{% trans 'About' %}</a>
             </li>
             <li class="has-dropdown {% if 'service' in request.path %}active{% endif %}">
-                <a href="{% if section != 'home' %}/{% endif %}#services">{% trans 'Our Services' %}</a>
+                <a href="{% if section != 'home' %}/{{ request.LANGUAGE_CODE }}/{% endif %}#services">{% trans 'Our Services' %}</a>
                 <ul class="dropdown">
                     <li><a href="{% url 'service:list_create' %}">{% trans 'All Services' %}</a></li>
                     {% for service in services %}
@@ -38,9 +39,12 @@
                     {% endfor %}
                 </ul>
             </li>
-            <li><a href="{% if section != 'home' %}/{% endif %}#pricing">{% trans 'Pricing' %}</a>
+            <li>
+                <a href="{% if section != 'home' %}/{{ request.LANGUAGE_CODE }}/{% endif %}#pricing">{% trans 'Pricing' %}</a>
             </li>
-            <li><a href="{% if section != 'home' %}/{% endif %}#contact">{% trans 'Contact Us' %}</a></li>
+            <li>
+                <a href="{% if section != 'home' %}/{{ request.LANGUAGE_CODE }}/{% endif %}#contact">{% trans 'Contact Us' %}</a>
+            </li>
             {% if request.user.is_authenticated %}
                 <li><a href="{% url 'contact:list' %}">{% trans 'Contacts' %}</a></li>
                 <li><a href="{% url 'logout' %}">{% trans 'Logout' %}</a></li>
@@ -53,9 +57,6 @@
             {% get_language_info_list for LANGUAGES as languages %}
             <li>
                 {% for language in languages %}
-                    {#                    <select>#}
-                    {#                        <option value="{{ language.code }}"><img src="{% static 'home/image/lang-{{ language.code }}.png' %}"/> </option>#}
-                    {#                    </select>#}
                     <li>
                         <a class="text-primary" href="/{{ language.code }}"><img style="max-width: 17px"
                                                                                  src="/static/home/image/lang-{{ language.code }}.png"/></a>
@@ -64,7 +65,6 @@
             </li>
         </ul>
         <!-- /Main navigation -->
-
     </div>
 </nav>
 <!-- /Nav -->
