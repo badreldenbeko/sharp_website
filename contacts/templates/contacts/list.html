@@ -40,13 +40,15 @@
                         <a href="
 
 
-                                {{ request.path }}{% if request.GET.query %}?query={{ request.get.Query }}&&{% endif %}?replayed=1">{% trans 'Replayed' %}</a>
+
+                                {{ request.path }}{% if request.GET.query %}?query={{ request.GET.Query }}&&{% endif %}?replayed=1">{% trans 'Replayed' %}</a>
                     </div>
                     <div class="col-md-4 text-left">
                         <a href="
 
 
-                                {{ request.path }}{% if request.GET.query %}?query={{ request.get.Query }}&&{% endif %}?not-replayed=0">{% trans 'Not replayed' %}</a>
+
+                                {{ request.path }}{% if request.GET.query %}?query={{ request.GET.Query }}&&{% endif %}?not-replayed=0">{% trans 'Not replayed' %}</a>
                     </div>
                 </div>
             </div>
