@@ -12,7 +12,6 @@ def contact_list(request):
     contacts = Contact.objects.all()
     query = request.GET.get('query')
     replayed = request.GET.get('replayed')
-    not_replayed = request.GET.get('not-replayed')
     if query:
         contacts = contacts.filter(Q(name__icontains=query) | Q(email__contains=query))
     if replayed:
