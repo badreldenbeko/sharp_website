@@ -17,8 +17,6 @@ def contact_list(request):
         contacts = contacts.filter(Q(name__icontains=query) | Q(email__contains=query))
     if replayed:
         contacts = contacts.filter(Q(replayed=True))
-    if not_replayed:
-        contacts = contacts.filter(Q(replayed=False))
     return render(request, 'contacts/list.html', {'contacts': contacts})
 
 
