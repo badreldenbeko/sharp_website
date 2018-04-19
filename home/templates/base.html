@@ -21,17 +21,6 @@
     {% block css %}{% endblock %}
 </head>
 <body>
-{#<div class="container-fluid"#}
-{#     style="padding-top: 10px; border-bottom: 1px solid #81AAFF; color: #81AAFF; position: fixed; z-index: 100000; background: white; width: 100%">#}
-{#    {% get_current_language as LANGUAGE_CODE %}#}
-{#    {% get_available_languages as LANGUAGES %}#}
-{#    {% get_language_info_list for LANGUAGES as languages %}#}
-{#    {% for language in languages %}#}
-{#        <span>#}
-{#            <a class="text-primary" href="/{{ language.code }}">{{ language.name_local }}</a> &nbsp;#}
-{#        </span>#}
-{#    {% endfor %}#}
-{#</div>#}
 <header {% if section == 'home' %}id="home"{% endif %}>
     {% if section == 'home' %}
         <!-- Background Image -->
