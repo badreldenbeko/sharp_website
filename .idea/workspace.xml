@@ -73,7 +73,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/static/home/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
+            <state relative-caret-position="-6">
               <caret line="1773" column="11" lean-forward="false" selection-start-line="1773" selection-start-column="11" selection-end-line="1773" selection-end-column="11" />
               <folding />
             </state>
@@ -83,12 +83,12 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            <state relative-caret-position="45">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
-                <element signature="e#509#598#0#HTML" expanded="true" />
-                <element signature="e#699#784#0#HTML" expanded="true" />
-                <element signature="e#957#977#0#HTML" expanded="true" />
+                <element signature="e#440#529#0#HTML" expanded="true" />
+                <element signature="e#630#715#0#HTML" expanded="true" />
+                <element signature="e#888#908#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -550,13 +550,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522438363869</updated>
     </task>
-    <task id="LOCAL-00028" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
-      <created>1524095869211</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1524095869211</updated>
-    </task>
     <task id="LOCAL-00029" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
       <created>1524095928697</created>
       <option name="number" value="00029" />
@@ -893,7 +886,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524102107598</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Login page styling.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
+      <created>1524102274308</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1524102274308</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1331,14 +1331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/static/home/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="1773" column="11" lean-forward="false" selection-start-line="1773" selection-start-column="11" selection-end-line="1773" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contacts/templates/contacts/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1355,14 +1347,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home/static/home/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="1773" column="11" lean-forward="false" selection-start-line="1773" selection-start-column="11" selection-end-line="1773" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="45">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#509#598#0#HTML" expanded="true" />
-            <element signature="e#699#784#0#HTML" expanded="true" />
-            <element signature="e#957#977#0#HTML" expanded="true" />
+            <element signature="e#440#529#0#HTML" expanded="true" />
+            <element signature="e#630#715#0#HTML" expanded="true" />
+            <element signature="e#888#908#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
