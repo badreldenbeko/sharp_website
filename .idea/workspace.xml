@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5fb8376f-7009-43c7-aa97-9752b44171f3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/services/templates/services/price/princing_include.html" afterPath="$PROJECT_DIR$/services/templates/services/price/princing_include.html" />
+      <change beforePath="$PROJECT_DIR$/home/static/home/css/style.css" afterPath="$PROJECT_DIR$/home/static/home/css/style.css" />
     </list>
     <ignored path=".idea/" />
     <ignored path="db.sqlite3" />
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home/static/home/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="308" column="13" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="13" />
+            <state relative-caret-position="119">
+              <caret line="266" column="18" lean-forward="false" selection-start-line="266" selection-start-column="18" selection-end-line="266" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -104,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="princing_include.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="princing_include.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/templates/services/price/princing_include.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -224,10 +224,10 @@
         <option value="$PROJECT_DIR$/contacts/templates/contacts/list.html" />
         <option value="$PROJECT_DIR$/contacts/views.py" />
         <option value="$PROJECT_DIR$/home/templates/base.html" />
-        <option value="$PROJECT_DIR$/home/static/home/css/style.css" />
         <option value="$PROJECT_DIR$/home/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/services/templates/services/service/detail.html" />
         <option value="$PROJECT_DIR$/services/templates/services/price/princing_include.html" />
+        <option value="$PROJECT_DIR$/home/static/home/css/style.css" />
       </list>
     </option>
   </component>
@@ -596,13 +596,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522438363869</updated>
     </task>
-    <task id="LOCAL-00038" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
-      <created>1524097578540</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1524097578540</updated>
-    </task>
     <task id="LOCAL-00039" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
       <created>1524097768871</created>
       <option name="number" value="00039" />
@@ -939,7 +932,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524104098650</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Edit service detail page.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
+      <created>1524104179644</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1524104179644</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1380,14 +1380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/static/home/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="308" column="13" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -1412,6 +1404,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="48" column="49" lean-forward="false" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/static/home/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="266" column="18" lean-forward="false" selection-start-line="266" selection-start-column="18" selection-end-line="266" selection-end-column="18" />
           <folding />
         </state>
       </provider>
