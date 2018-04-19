@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 13:37+0200\n"
+"POT-Creation-Date: 2018-04-19 04:30+0200\n"
 "PO-Revision-Date: 2018-03-31 13:15+0000\n"
 "Last-Translator: b'  <badrelden@sharp4it.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,20 +20,20 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Translated-Using: django-rosetta 0.8.1\n"
 
-#: .\home\templates\base.html:9 .\home\templates\base.html:56
+#: .\home\templates\base.html:9 .\home\templates\base.html:45
 msgid "Sharp4IT"
 msgstr "ال-شارب"
 
-#: .\home\templates\base.html:57
+#: .\home\templates\base.html:46
 msgid "We will have the answer to all your inquiries"
 msgstr "سيكون لدينا الإجابة على جميع الاستفسارات الخاصة بك"
 
-#: .\home\templates\base.html:59
+#: .\home\templates\base.html:48
 msgid "We will arrange your company to control your business resources"
 msgstr "سوف نقوم بترتيب شركتك للتحكم في موارد أعمالك"
 
 #: .\home\templates\home\home.html:6 .\home\templates\includes\nav-bar.html:26
-#: .\home\templates\registration\login.html:27
+#: .\home\templates\registration\login.html:39
 msgid "Home"
 msgstr "الرئيسية"
 
@@ -128,16 +128,16 @@ msgstr "تسجيل الخروج"
 
 #: .\home\templates\includes\nav-bar.html:49
 #: .\home\templates\registration\login.html:7
-#: .\home\templates\registration\login.html:22
 #: .\home\templates\registration\login.html:33
+#: .\home\templates\registration\login.html:46
 msgid "Login"
 msgstr "تسجيل الدخول"
 
-#: .\home\templates\registration\login.html:25
+#: .\home\templates\registration\login.html:36
 msgid "Username and password didn\"t match. Please try again."
 msgstr "حدث خطأ فى اسم المستخدم او كلمة المرور."
 
-#: .\home\templates\registration\login.html:27
+#: .\home\templates\registration\login.html:38
 msgid "Please login or back to "
 msgstr "برجاء تسجيل الدخول أو العودة إلى "
 

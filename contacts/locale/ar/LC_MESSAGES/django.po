@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 13:37+0200\n"
+"POT-Creation-Date: 2018-04-19 04:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,38 +31,76 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
+#: .\contacts\templates\contacts\edit.html:12
 #: .\contacts\templates\contacts\list.html:12
 msgid "Contacts"
 msgstr "جهات الاتصال"
 
-#: .\contacts\templates\contacts\list.html:28
-msgid "Total"
-msgstr "كل"
+#: .\contacts\templates\contacts\edit.html:17
+#, fuzzy
+#| msgid "Contacts"
+msgid "All contacts"
+msgstr "جهات الاتصال"
 
-#: .\contacts\templates\contacts\list.html:28
+#: .\contacts\templates\contacts\edit.html:27
+#: .\contacts\templates\contacts\list.html:49
 msgid "Contact"
 msgstr "جهة اتصال"
 
-#: .\contacts\templates\contacts\list.html:32
-msgid "Name"
-msgstr "الاسم"
-
-#: .\contacts\templates\contacts\list.html:33
+#: .\contacts\templates\contacts\edit.html:28
+#: .\contacts\templates\contacts\list.html:55
 msgid "Email"
 msgstr ""
 
-#: .\contacts\templates\contacts\list.html:34
-msgid "Subject"
-msgstr ""
-
-#: .\contacts\templates\contacts\list.html:35
+#: .\contacts\templates\contacts\edit.html:29
+#: .\contacts\templates\contacts\list.html:58
 msgid "Created from"
 msgstr "انشىء فى"
 
-#: .\contacts\templates\contacts\list.html:44
+#: .\contacts\templates\contacts\edit.html:30
+msgid "Last update"
+msgstr ""
+
+#: .\contacts\templates\contacts\edit.html:35
+msgid "Save"
+msgstr ""
+
+#: .\contacts\templates\contacts\list.html:34
+msgid "Filters"
+msgstr ""
+
+#: .\contacts\templates\contacts\list.html:37
+msgid "All"
+msgstr ""
+
+#: .\contacts\templates\contacts\list.html:40
+msgid "Replayed"
+msgstr ""
+
+#: .\contacts\templates\contacts\list.html:43
+msgid "Not replayed"
+msgstr ""
+
+#: .\contacts\templates\contacts\list.html:48
+msgid "Total"
+msgstr "كل"
+
+#: .\contacts\templates\contacts\list.html:54
+msgid "Name"
+msgstr "الاسم"
+
+#: .\contacts\templates\contacts\list.html:56
+msgid "Subject"
+msgstr ""
+
+#: .\contacts\templates\contacts\list.html:57
+msgid "Replyed"
+msgstr ""
+
+#: .\contacts\templates\contacts\list.html:69
 msgid "Ago"
 msgstr "منذ"
 
-#: .\contacts\templates\contacts\list.html:51
+#: .\contacts\templates\contacts\list.html:81
 msgid "There is no contacts..."
 msgstr "لا يوجد جهات اتصال..."

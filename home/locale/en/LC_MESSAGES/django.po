@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 13:37+0200\n"
+"POT-Creation-Date: 2018-04-19 04:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\home\templates\base.html:9 .\home\templates\base.html:56
+#: .\home\templates\base.html:9 .\home\templates\base.html:45
 msgid "Sharp4IT"
 msgstr ""
 
-#: .\home\templates\base.html:57
+#: .\home\templates\base.html:46
 msgid "We will have the answer to all your inquiries"
 msgstr ""
 
-#: .\home\templates\base.html:59
+#: .\home\templates\base.html:48
 msgid "We will arrange your company to control your business resources"
 msgstr ""
 
 #: .\home\templates\home\home.html:6 .\home\templates\includes\nav-bar.html:26
-#: .\home\templates\registration\login.html:27
+#: .\home\templates\registration\login.html:39
 msgid "Home"
 msgstr ""
 
@@ -121,15 +121,15 @@ msgstr ""
 
 #: .\home\templates\includes\nav-bar.html:49
 #: .\home\templates\registration\login.html:7
-#: .\home\templates\registration\login.html:22
 #: .\home\templates\registration\login.html:33
+#: .\home\templates\registration\login.html:46
 msgid "Login"
 msgstr ""
 
-#: .\home\templates\registration\login.html:25
+#: .\home\templates\registration\login.html:36
 msgid "Username and password didn\"t match. Please try again."
 msgstr ""
 
-#: .\home\templates\registration\login.html:27
+#: .\home\templates\registration\login.html:38
 msgid "Please login or back to "
 msgstr ""

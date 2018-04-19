@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 13:37+0200\n"
+"POT-Creation-Date: 2018-04-19 04:30+0200\n"
 "PO-Revision-Date: 2018-04-04 15:50+0000\n"
 "Last-Translator: b'  <badrelden@sharp4it.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr "هل تريد حذف خدمة"
 #: .\services\templates\services\price\detail.html:36
 #: .\services\templates\services\service\delete.html:17
 #: .\services\templates\services\service\detail.html:38
-#: .\services\templates\services\service\detail.html:119
+#: .\services\templates\services\service\detail.html:106
 msgid "Delete"
 msgstr "حذف"
 
@@ -76,7 +76,6 @@ msgstr "السعر"
 
 #: .\services\templates\services\price\detail.html:46
 #: .\services\templates\services\price\detail.html:74
-#: .\services\templates\services\price\princing_include.html:33
 msgid "LE"
 msgstr "ج.م"
 
@@ -85,7 +84,7 @@ msgid "Other pricing plan:"
 msgstr "خطط اسعار اخرى:"
 
 #: .\services\templates\services\price\detail.html:86
-#: .\services\templates\services\price\princing_include.html:44
+#: .\services\templates\services\price\princing_include.html:41
 msgid "Details"
 msgstr "تفصيلات"
 
@@ -97,31 +96,35 @@ msgstr "لا يوجد خطط اسعار اخرى ..."
 msgid "Price Form"
 msgstr "تسعر جديد"
 
-#: .\services\templates\services\price\princing_include.html:14
+#: .\services\templates\services\price\princing_include.html:11
 msgid "pricing"
 msgstr "التسعير"
 
-#: .\services\templates\services\price\princing_include.html:20
+#: .\services\templates\services\price\princing_include.html:17
 msgid "Add pricing plan"
 msgstr "اضافة خطة اسعار جديدة"
 
-#: .\services\templates\services\price\princing_include.html:55
+#: .\services\templates\services\price\princing_include.html:30
+msgid "LE/Year"
+msgstr "ج.م/سنة"
+
+#: .\services\templates\services\price\princing_include.html:50
 msgid "No pricing add ..."
 msgstr "لا يوجد خطط اسعار"
 
-#: .\services\templates\services\service\detail.html:88
+#: .\services\templates\services\service\detail.html:75
 msgid "Other Services"
 msgstr "خدمات أخرى"
 
-#: .\services\templates\services\service\detail.html:96
+#: .\services\templates\services\service\detail.html:83
 msgid "No other services"
 msgstr "لا يوجد خدمات اخرى معرفة"
 
-#: .\services\templates\services\service\detail.html:107
+#: .\services\templates\services\service\detail.html:94
 msgid "Add post"
 msgstr "اضف خبر"
 
-#: .\services\templates\services\service\detail.html:139
+#: .\services\templates\services\service\detail.html:126
 msgid "Read More"
 msgstr "المزيد"
 
