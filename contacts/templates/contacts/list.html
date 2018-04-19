@@ -38,19 +38,11 @@
                     </div>
                     <div class="col-md-2 text-left">
                         <a href="
-
-
-
-
-                                {{ request.path }}{% if request.GET.query %}?query={{ request.GET.query }}&&{% endif %}?replayed=1">{% trans 'Replayed' %}</a>
+                                {{ request.path }}?replayed=1{% if request.GET.query %}&&?query={{ request.GET.query }}{% endif %}">{% trans 'Replayed' %}</a>
                     </div>
                     <div class="col-md-4 text-left">
                         <a href="
-
-
-
-
-                                {{ request.path }}{% if request.GET.query %}?query={{ request.GET.query }}&&{% endif %}?not-replayed=0">{% trans 'Not replayed' %}</a>
+                                {{ request.path }}?not-replayed=0{% if request.GET.query %}&&?query={{ request.GET.query }}{% endif %}">{% trans 'Not replayed' %}</a>
                     </div>
                 </div>
             </div>
