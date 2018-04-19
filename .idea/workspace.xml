@@ -112,6 +112,7 @@
       <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/templates/includes/footer.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="232">
               <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
@@ -124,6 +125,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="87" column="92" lean-forward="false" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="92" />
+||||||| merged common ancestors
+            <state relative-caret-position="147">
+              <caret line="21" column="52" lean-forward="false" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+=======
+            <state relative-caret-position="232">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -665,6 +673,31 @@
       <option name="presentableId" value="Default" />
       <updated>1522438363869</updated>
     </task>
+<<<<<<< HEAD
+||||||| merged common ancestors
+    <task id="LOCAL-00045" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
+      <created>1524098269932</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1524098269932</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
+      <created>1524098364936</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1524098364936</updated>
+    </task>
+=======
+    <task id="LOCAL-00046" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
+      <created>1524098364936</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1524098364936</updated>
+    </task>
+>>>>>>> origin/master
     <task id="LOCAL-00047" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
       <created>1524098668610</created>
       <option name="number" value="00047" />
@@ -994,6 +1027,7 @@
       <option name="project" value="LOCAL" />
       <updated>1524105965004</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00094" summary="edit social icons in footer.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
       <created>1524106049689</created>
       <option name="number" value="00094" />
@@ -1009,6 +1043,18 @@
       <updated>1524106092043</updated>
     </task>
     <option name="localTasksCounter" value="96" />
+||||||| merged common ancestors
+    <option name="localTasksCounter" value="94" />
+=======
+    <task id="LOCAL-00094" summary="edit social icons in footer.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
+      <created>1524106049689</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1524106049689</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
+>>>>>>> origin/master
     <servers />
   </component>
   <component name="TodoView">
@@ -1476,6 +1522,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/includes/footer.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="232">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
@@ -1494,6 +1541,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+||||||| merged common ancestors
+        <state relative-caret-position="147">
+          <caret line="21" column="52" lean-forward="false" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+=======
+        <state relative-caret-position="232">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
