@@ -37,13 +37,10 @@
                         <a href="{% url 'contact:list' %}">{% trans 'All' %}</a>
                     </div>
                     <div class="col-md-2 text-left">
-                        <a href="&&?replayed=1">{% trans 'Replayed' %}</a>
+                        <a href="?query={{ request.GET.query }}&&?replayed=1">{% trans 'Replayed' %}</a>
                     </div>
                     <div class="col-md-4 text-left">
-                        <form method="get">
-                            <input type="text" class="hidden" name="not-replayed" value="0">
-                            <button class="btn-link" type="submit">{% trans 'Not replayed' %}</button>
-                        </form>
+                        <a href="?query={{ request.GET.query }}&&?not-replayed=1">{% trans 'Not replayed' %}</a>
                     </div>
                 </div>
             </div>
