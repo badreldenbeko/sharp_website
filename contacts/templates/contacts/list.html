@@ -37,10 +37,12 @@
                         <a href="{% url 'contact:list' %}">{% trans 'All' %}</a>
                     </div>
                     <div class="col-md-2 text-left">
-                        <a href="{% if request.GET.query %}&&{% endif %}?replayed=1">{% trans 'Replayed' %}</a>
+                        <a href="
+                                {{ request.path }}{% if request.GET.query %}&&{% endif %}?replayed=1">{% trans 'Replayed' %}</a>
                     </div>
                     <div class="col-md-4 text-left">
-                        <a href="{% if request.GET.query %}&&{% endif %}?not-replayed=0">{% trans 'Not replayed' %}</a>
+                        <a href="
+                                {{ request.path }}{% if request.GET.query %}&&{% endif %}?not-replayed=0">{% trans 'Not replayed' %}</a>
                     </div>
                 </div>
             </div>
