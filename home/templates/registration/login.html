@@ -10,19 +10,6 @@
 {% block css %}
     <link rel="stylesheet" href="{% static 'home/css/floating-labels.css' %}">
     <style>
-        .backg-img {
-            background: url("{% static 'home/image/Business-Performance-background.jpg' %}");
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
         #nav.nav-transparent:not(.fixed-nav) .main-nav > li > a {
             color: #f0f0f0;
         }
@@ -30,7 +17,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="backg-img">
+    <div class="backg-img" style="background: url("{% static 'home/image/Business-Performance-background.jpg' %}");">
         <div class="container">
             <div class="col-md-4 col-md-offset-4"
                  style="background: rgba(0,0,0,0.81); border-radius: 7px; margin: 50px; padding: 35px">
