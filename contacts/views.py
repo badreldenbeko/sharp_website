@@ -6,14 +6,6 @@ from .forms import ContactReplayForm
 from .models import Contact
 
 
-def replayed(contacts, replayed=None):
-    if replayed:
-        contacts.filter(Q(replayed=True))
-    else:
-        contacts.filter(Q(replayed=False))
-    return contacts
-
-
 # Create your views here.
 @login_required
 def contact_list(request):
@@ -22,8 +14,14 @@ def contact_list(request):
     replayed = request.GET.get('replayed')
     if query:
         contacts = contacts.filter(Q(name__icontains=query) | Q(email__contains=query))
-        replayed(contacts, replayed)
-    replayed(contacts)
+        if replayed:
+            contacts = contacts.filter(Q(replayed=True))
+        else:
+            contacts = contacts.filter(Q(replayed=False))
+    if replayed:
+        contacts = contacts.filter(Q(replayed=True))
+    else:
+        contacts = contacts.filter(Q(replayed=False))
     return render(request, 'contacts/list.html', {'contacts': contacts})
 
 
