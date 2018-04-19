@@ -313,7 +313,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 #nav.fixed-nav {
     min-height: 100px;
     position: fixed;
-    background: white;
+    background: rgba(0, 0, 0, 0.81);
     left: 0;
     right: 0;
     padding: 0px 0px;
