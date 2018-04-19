@@ -17,19 +17,22 @@
 {% endblock %}
 
 {% block content %}
-    <form class="form-signin" action="." method="post">
-        <div class="text-center mb-4">
-            <h1>{% trans 'Login' %}</h1>
+    <div class="col-md-4" style="background: rgba(0,0,0,0.81); border-radius: 7px;">
+        <form class="form-signin" action="." method="post">
+            <div class="text-center mb-4">
+                <h1>{% trans 'Login' %}</h1>
 
-            {% if form.errors %}
-                <p>{% trans 'Username and password didn"t match. Please try again.' %}</p>
-            {% else %}
-                <p>{% trans 'Please login or back to ' %}<a href="{% url 'home:home_page' %}">{% trans 'Home' %}</a></p>
-            {% endif %}
-        </div>
-        {{ form.as_p }}
-        {% csrf_token %}
-        <input type="hidden" name="next" value="{{ next }}">
-        <button class="outline-btn btn-block" type="submit">{% trans 'Login' %}</button>
-    </form>
+                {% if form.errors %}
+                    <p>{% trans 'Username and password didn"t match. Please try again.' %}</p>
+                {% else %}
+                    <p>{% trans 'Please login or back to ' %}<a href="{% url 'home:home_page' %}">{% trans 'Home' %}</a>
+                    </p>
+                {% endif %}
+            </div>
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">
+            <button class="outline-btn btn-block" type="submit">{% trans 'Login' %}</button>
+        </form>
+    </div>
 {% endblock %}
