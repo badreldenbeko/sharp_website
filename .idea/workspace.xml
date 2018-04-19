@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5fb8376f-7009-43c7-aa97-9752b44171f3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/home/static/home/css/style.css" afterPath="$PROJECT_DIR$/home/static/home/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/home/templates/registration/login.html" afterPath="$PROJECT_DIR$/home/templates/registration/login.html" />
     </list>
     <ignored path=".idea/" />
     <ignored path="db.sqlite3" />
@@ -70,25 +70,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/static/home/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="1781" column="0" lean-forward="false" selection-start-line="1781" selection-start-column="0" selection-end-line="1782" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="308" column="13" lean-forward="true" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="232">
+              <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding>
-                <element signature="e#440#529#0#HTML" expanded="true" />
-                <element signature="e#630#715#0#HTML" expanded="true" />
-                <element signature="e#888#908#0#HTML" expanded="true" />
+                <element signature="e#517#606#0#HTML" expanded="true" />
+                <element signature="e#707#792#0#HTML" expanded="true" />
+                <element signature="e#965#985#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -206,8 +206,8 @@
         <option value="$PROJECT_DIR$/contacts/templates/contacts/list.html" />
         <option value="$PROJECT_DIR$/contacts/views.py" />
         <option value="$PROJECT_DIR$/home/templates/base.html" />
-        <option value="$PROJECT_DIR$/home/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/home/static/home/css/style.css" />
+        <option value="$PROJECT_DIR$/home/templates/registration/login.html" />
       </list>
     </option>
   </component>
@@ -550,13 +550,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522438363869</updated>
     </task>
-    <task id="LOCAL-00030" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
-      <created>1524095987385</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1524095987385</updated>
-    </task>
     <task id="LOCAL-00031" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
       <created>1524096008565</created>
       <option name="number" value="00031" />
@@ -893,7 +886,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524102366830</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Login page styling.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
+      <created>1524102466688</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1524102466688</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1347,23 +1347,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/templates/registration/login.html">
+    <entry file="file://$PROJECT_DIR$/home/static/home/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#440#529#0#HTML" expanded="true" />
-            <element signature="e#630#715#0#HTML" expanded="true" />
-            <element signature="e#888#908#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="308" column="13" lean-forward="true" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/static/home/css/style.css">
+    <entry file="file://$PROJECT_DIR$/home/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="1781" column="0" lean-forward="false" selection-start-line="1781" selection-start-column="0" selection-end-line="1782" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="232">
+          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding>
+            <element signature="e#517#606#0#HTML" expanded="true" />
+            <element signature="e#707#792#0#HTML" expanded="true" />
+            <element signature="e#965#985#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
