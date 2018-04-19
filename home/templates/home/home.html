@@ -129,8 +129,11 @@
                 {% endfor %}
             </div>
             <!-- /Row -->
-            <div class="row" style="padding: 30px"><p><a class="main-btn"
-                                                         href="{% url 'service:list_create' %}">{% trans 'All services' %}</a></p></div>
+            {% if services.count > 3 %}
+                <div class="row" style="padding: 30px"><p><a class="main-btn"
+                                                             href="{% url 'service:list_create' %}">{% trans 'All services' %}</a>
+                </p></div>
+            {% endif %}
         </div>
         <!-- /Container -->
 
@@ -139,13 +142,13 @@
 
 
     <div id="pricing" class="section md-padding">
-    {% for service in services %}
-        {% if service.publish_pricing %}
-            <div class="row">
-                {% include 'services/price/princing_include.html' %}
-            </div>
-        {% endif %}
-    {% endfor %}
+        {% for service in services %}
+            {% if service.publish_pricing %}
+                <div class="row">
+                    {% include 'services/price/princing_include.html' %}
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
 
 
