@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5fb8376f-7009-43c7-aa97-9752b44171f3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/services/templates/services/price/princing_include.html" afterPath="$PROJECT_DIR$/services/templates/services/price/princing_include.html" />
     </list>
     <ignored path=".idea/" />
     <ignored path="db.sqlite3" />
@@ -106,8 +107,8 @@
       <file leaf-file-name="princing_include.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/templates/services/price/princing_include.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="48" column="49" lean-forward="false" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -595,13 +596,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522438363869</updated>
     </task>
-    <task id="LOCAL-00037" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
-      <created>1524097499615</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1524097499615</updated>
-    </task>
     <task id="LOCAL-00038" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
       <created>1524097578540</created>
       <option name="number" value="00038" />
@@ -938,7 +932,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524104057661</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Edit service detail page.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
+      <created>1524104098650</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1524104098650</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1031,7 +1032,8 @@
     <MESSAGE value="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
     <MESSAGE value="Login page&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
     <MESSAGE value="Login page styling.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login page styling.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
+    <MESSAGE value="Edit service detail page.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit service detail page.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1408,8 +1410,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/services/templates/services/price/princing_include.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="48" column="49" lean-forward="false" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
           <folding />
         </state>
       </provider>
