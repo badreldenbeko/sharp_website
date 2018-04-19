@@ -14,15 +14,15 @@ def contact_list(request):
     replayed = request.GET.get('replayed')
     if query:
         contacts = contacts.filter(Q(name__icontains=query) | Q(email__contains=query))
-        if replayed:
+        if replayed == '1':
             contacts = contacts.filter(Q(replayed=True))
-        if not replayed:
+        if replayed == '0':
             contacts = contacts.filter(Q(replayed=False))
-    if replayed:
+    if replayed == '1':
         contacts = contacts.filter(Q(replayed=True))
         if query:
             contacts = contacts.filter(Q(name__icontains=query) | Q(email__contains=query))
-    if not replayed:
+    if not replayed == '0':
         contacts = contacts.filter(Q(replayed=False))
         if query:
             contacts = contacts.filter(Q(name__icontains=query) | Q(email__contains=query))
