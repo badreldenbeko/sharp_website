@@ -56,10 +56,6 @@
                                 {% if service.image %}{{ service.image.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}"/>
                         </div>
                         <div class="blog-content text-justify">
-                            <ul class="blog-meta">
-                                <li><i class="fa fa-clock-o"></i> {{ service.created|timesince }}</li>
-                                <li><i class="fa fa-comments"></i> {{ service.posts.count }}</li>
-                            </ul>
                             <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
                                 {{ service.en_name }}{% endif %}</h3>
                             <p>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_description|linebreaks }}{% else %}
@@ -78,7 +74,7 @@
                             {% for service in services %}
                                 <a href="{{ service.get_absolute_url }}">
                                     {% if request.LANGUAGE_CODE == 'ar' %}&nbsp; {{ service.ar_name }} &nbsp;{% else %}
-                                        &nbsp; {{ service.en_name }} &nbsp;{% endif %}<span>{{ service.posts.count }} post{{ service.posts.count|pluralize }}</span></a>
+                                        &nbsp; {{ service.en_name }} &nbsp;{% endif %}</a>
                             {% empty %}
                                 {% trans 'No other services' %}
                             {% endfor %}
@@ -115,9 +111,6 @@
                                 <div class="media-heading">
                                     <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_title }}{% else %}
                                         {{ post.en_title }}{% endif %}</h3>
-                                    <ul class="blog-meta">
-                                        <li><i class="fa fa-clock-o"></i> {{ post.created|timesince }}</li>
-                                    </ul>
                                 </div>
                                 <p>{% if request.LANGUAGE_CODE == 'ar' %}
                                     {{ post.ar_body|truncatechars:250|linebreaks }}{% else %}
