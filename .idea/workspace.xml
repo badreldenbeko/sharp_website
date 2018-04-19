@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fb8376f-7009-43c7-aa97-9752b44171f3" name="Default" comment="">
+    <list default="true" id="5fb8376f-7009-43c7-aa97-9752b44171f3" name="Default" comment="edit social icons in footer.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/sharp/settings.py" afterPath="$PROJECT_DIR$/sharp/settings.py" />
     </list>
     <ignored path=".idea/" />
     <ignored path="db.sqlite3" />
@@ -52,8 +53,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sharp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="166" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+            <state relative-caret-position="249">
+              <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1491,8 +1492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sharp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="166" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+        <state relative-caret-position="249">
+          <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
           <folding />
         </state>
       </provider>

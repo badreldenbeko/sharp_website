@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%2x8r%vadfa0$0sj@x-t)9g6n38=al1c5@0$(msf8x%*bw()#v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.sharp4it.com', '212.237.25.27']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'sharp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sharp_website',
-        'USER': 'root',
-        'PASSWORD': 'Sharp@2016',
+        'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': '',
+        # 'USER': '',
+        # 'PASSWORD': '',
     }
 }
 
@@ -159,9 +159,8 @@ PARLER_LANGUAGES = {
     }
 }
 
-EMAIL_HOST = 'mail.sharp4it.com'
-EMAIL_HOST_USER = 'info@sharp4it.com'
-EMAIL_HOST_PASSWORD = 'allahh'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
+# EMAIL_HOST = ''
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
