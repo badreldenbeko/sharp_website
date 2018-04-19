@@ -20,8 +20,12 @@ def contact_list(request):
             contacts = contacts.filter(Q(replayed=False))
     if replayed:
         contacts = contacts.filter(Q(replayed=True))
+        if query:
+            contacts = contacts.filter(Q(name__icontains=query) | Q(email__contains=query))
     else:
         contacts = contacts.filter(Q(replayed=False))
+        if query:
+            contacts = contacts.filter(Q(name__icontains=query) | Q(email__contains=query))
     return render(request, 'contacts/list.html', {'contacts': contacts})
 
 
