@@ -77,8 +77,8 @@
                         <div class="widget-category">
                             {% for service in services %}
                                 <a href="{{ service.get_absolute_url }}">
-                                    {% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }} {% else %}
-                                        {{ service.en_name }} {% endif %}<span>{{ service.posts.count }} post{{ service.posts.count|pluralize }}</span></a>
+                                    {% if request.LANGUAGE_CODE == 'ar' %}&nbsp; {{ service.ar_name }} &nbsp;{% else %}
+                                        &nbsp; {{ service.en_name }} &nbsp;{% endif %}<span>{{ service.posts.count }} post{{ service.posts.count|pluralize }}</span></a>
                             {% empty %}
                                 {% trans 'No other services' %}
                             {% endfor %}
