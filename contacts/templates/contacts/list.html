@@ -37,10 +37,10 @@
                         <a href="{% url 'contact:list' %}">{% trans 'All' %}</a>
                     </div>
                     <div class="col-md-2 text-left">
-                        <a href="{{ request.path }}?replayed=1">{% trans 'Replayed' %}</a>
+                        <a href="?replayed=1">{% trans 'Replayed' %}</a>
                     </div>
                     <div class="col-md-4 text-left">
-                        <a href="{{ request.path }}?not-replayed=0">{% trans 'Not replayed' %}</a>
+                        <a href="?not-replayed=0">{% trans 'Not replayed' %}</a>
                     </div>
                 </div>
             </div>
