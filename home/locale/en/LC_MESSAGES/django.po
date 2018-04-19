@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-19 04:30+0200\n"
+"POT-Creation-Date: 2018-04-19 21:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid ""
 msgstr ""
 
 #: .\home\templates\home\home.html:110
-#: .\home\templates\includes\nav-bar.html:31
+#: .\home\templates\includes\nav-bar.html:32
 msgid "Our Services"
 msgstr ""
 
@@ -63,19 +63,19 @@ msgstr ""
 msgid "No services published ..."
 msgstr ""
 
-#: .\home\templates\home\home.html:133
+#: .\home\templates\home\home.html:134
 msgid "All services"
 msgstr ""
 
-#: .\home\templates\home\home.html:160
+#: .\home\templates\home\home.html:163
 msgid "Get in touch"
 msgstr ""
 
-#: .\home\templates\home\home.html:168
+#: .\home\templates\home\home.html:170
 msgid "Phone"
 msgstr ""
 
-#: .\home\templates\home\home.html:178
+#: .\home\templates\home\home.html:179
 msgid "Email"
 msgstr ""
 
@@ -84,42 +84,42 @@ msgid "Address"
 msgstr ""
 
 #: .\home\templates\home\home.html:189
-msgid "47 Haron El Rashed St. - Heliopolies"
+msgid "7, Ewais, Mansheya El-Bakry, Heliopolis, Cairo Governorate"
 msgstr ""
 
 #: .\home\templates\home\home.html:198
 msgid "Send message"
 msgstr ""
 
-#: .\home\templates\includes\footer.html:34
+#: .\home\templates\includes\footer.html:30
 msgid "Copyright © 2018. All Rights Reserved. Sharp4IT"
 msgstr ""
 
-#: .\home\templates\includes\nav-bar.html:28
+#: .\home\templates\includes\nav-bar.html:29
 msgid "About"
 msgstr ""
 
-#: .\home\templates\includes\nav-bar.html:33
+#: .\home\templates\includes\nav-bar.html:34
 msgid "All Services"
 msgstr ""
 
-#: .\home\templates\includes\nav-bar.html:41
+#: .\home\templates\includes\nav-bar.html:43
 msgid "Pricing"
 msgstr ""
 
-#: .\home\templates\includes\nav-bar.html:43
+#: .\home\templates\includes\nav-bar.html:46
 msgid "Contact Us"
 msgstr ""
 
-#: .\home\templates\includes\nav-bar.html:45
+#: .\home\templates\includes\nav-bar.html:49
 msgid "Contacts"
 msgstr ""
 
-#: .\home\templates\includes\nav-bar.html:46
+#: .\home\templates\includes\nav-bar.html:50
 msgid "Logout"
 msgstr ""
 
-#: .\home\templates\includes\nav-bar.html:49
+#: .\home\templates\includes\nav-bar.html:53
 #: .\home\templates\registration\login.html:7
 #: .\home\templates\registration\login.html:33
 #: .\home\templates\registration\login.html:46
