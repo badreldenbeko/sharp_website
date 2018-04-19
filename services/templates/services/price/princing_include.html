@@ -31,9 +31,9 @@
                         </div>
                         <div class="price-content">
                             {% if request.LANGUAGE_CODE == 'ar' %}
-                                {{ price.ar_detail|linebreaks }}
+                                {{ price.ar_detail|safe }}
                             {% else %}
-                                {{ price.en_detail|linebreaks }}
+                                {{ price.en_detail|safe }}
                             {% endif %}
                         </div>
                         <div class="price-btn">

@@ -32,6 +32,7 @@ urlpatterns = i18n_patterns(
     path('post/', include('services.post_urls', namespace='post')),
     path('price/', include('services.pricing-urls', namespace='price')),
     path('contact/', include('contacts.urls', namespace='contact')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('', include('home.urls', namespace='home')),
 )
 

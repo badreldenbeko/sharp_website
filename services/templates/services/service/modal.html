@@ -1,4 +1,7 @@
 {% load i18n %}
+{% load static %}
+<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 <!-- Modal -->
 <div style="z-index: 100000;" class="modal fade" id="serviceFormModal" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
@@ -14,7 +17,8 @@
             <form method="post" enctype="multipart/form-data">
                 <div class="modal-body">
                     {% csrf_token %}
-                    {{ service_form }}
+                    {{ service_form.media }}
+                    {{ service_form.as_p }}
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans 'Close' %}</button>

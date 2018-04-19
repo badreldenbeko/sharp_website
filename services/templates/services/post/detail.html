@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load staticfiles %}
 {% load i18n %}
 
@@ -41,23 +42,29 @@
     </div>
 
     <div id="blog" class="section md-padding">
-        <!-- Row -->
-        <div class="row">
-            <!-- Main -->
-            <div class="container">
-                <div class="col-md-6">
-                    <img class="img-responsive" src="
+    <!-- Row -->
+    <div class="row">
+        <!-- Main -->
+        <div class="container">
+            <div class="col-md-6">
+                <img class="img-responsive" src="
 
-                            {% if post.image %}{{ post.image.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}"/>
-                </div>
-                <div class="text-justify col-md-6">
-                    <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_title }}{% else %}
-                        {{ post.en_title }}{% endif %}</h3>
-                    <p>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_body|linebreaks }}{% else %}
-                        {{ post.en_body|linebreaks }}{% endif %}</p>
-                </div>
-                <br>
+
+                        {% if post.image %}{{ post.image.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}"/>
+            </div>
+            <div class="text-justify col-md-6">
+                <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_title }}{% else %}
+                    {{ post.en_title }}{% endif %}</h3>
+                <p>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_body|linebreaks }}{% else %}
+                    {{ post.en_body|linebreaks }}{% endif %}</p>
             </div>
             <br>
         </div>
+        <br>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 {% endblock %}

@@ -40,3 +40,7 @@ def upload_location(instance, filename):
     Klass = str(instance.__class__.__name__)
     location = '{}/{}/{}.jpg'.format(Klass, instance.slug, name)
     return location
+
+
+def get_filename(filename):
+    return filename.upper()

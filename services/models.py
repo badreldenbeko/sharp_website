@@ -2,7 +2,7 @@
 from django.db import models
 from django.db.models.signals import pre_save
 from django.urls import reverse
-
+from ckeditor.fields import RichTextField
 from sharp.utls import unique_slug_generator, upload_location
 
 
@@ -11,8 +11,8 @@ class Service(models.Model):
     en_name = models.CharField(max_length=200)
     ar_name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, db_index=True, unique=True)
-    en_description = models.TextField(null=True, blank=True)
-    ar_description = models.TextField(null=True, blank=True)
+    en_description = RichTextField(null=True, blank=True)
+    ar_description = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to=upload_location, blank=True, null=True)
     publish_on_home = models.BooleanField(default=False)
     publish_pricing = models.BooleanField(default=False)
@@ -43,8 +43,8 @@ class ServicePost(models.Model):
     en_title = models.CharField(max_length=200)
     ar_title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, db_index=True, unique=True)
-    en_body = models.TextField(null=True, blank=True)
-    ar_body = models.TextField(null=True, blank=True)
+    en_body = RichTextField(null=True, blank=True)
+    ar_body = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to=upload_location, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -74,8 +74,8 @@ class ServicePrice(models.Model):
     ar_price_title = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
     slug = models.SlugField(max_length=200, db_index=True, unique=True)
-    en_detail = models.TextField(null=True, blank=True)
-    ar_detail = models.TextField(null=True, blank=True)
+    en_detail = RichTextField(null=True, blank=True)
+    ar_detail = RichTextField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
