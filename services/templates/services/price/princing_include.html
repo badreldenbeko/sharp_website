@@ -1,13 +1,10 @@
 {% load i18n %}
 <!-- Pricing -->
 <div id="pricing" class="section md-padding">
-
     <!-- Container -->
     <div class="container">
-
         <!-- Row -->
         <div class="row">
-
             <!-- Section header -->
             <div class="section-header text-center">
                 <h2 class="title">{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
@@ -50,20 +47,13 @@
             {% empty %}
                 <!-- pricing -->
                 <div class="col-sm-12 center-block">
-                    <div class="pricing">
-                        <div class="price-head">
-                            <span class="price-title">{% trans 'No pricing add ...' %}</span>
-                        </div>
-                    </div>
+                    <span class="price-title">{% trans 'No pricing add ...' %}</span>
                 </div>
                 <!-- /pricing -->
             {% endfor %}
-
         </div>
         <!-- Row -->
-
     </div>
     <!-- /Container -->
-
 </div>
 <!-- /Pricing -->
