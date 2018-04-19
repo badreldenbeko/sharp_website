@@ -1,7 +1,9 @@
 certifi==2018.1.18
 chardet==3.0.4
 Django==2.0.3
+django-ckeditor==5.4.0
 django-crispy-forms==1.7.2
+django-js-asset==1.1.0
 django-rosetta==0.8.1
 idna==2.6
 microsofttranslator==0.8
