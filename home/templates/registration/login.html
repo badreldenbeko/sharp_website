@@ -10,7 +10,7 @@
 {% block css %}
     <link rel="stylesheet" href="{% static 'home/css/floating-labels.css' %}">
     <style>
-        body {
+        .backg-img {
             background: url("{% static 'home/image/Business-Performance-background.jpg' %}");
         }
 
@@ -21,7 +21,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container backg-img">
         <div class="col-md-4" style="background: rgba(0,0,0,0.81); border-radius: 7px; margin: 50px; padding: 35px">
             <div class="overlay"></div>
             <form action="." method="post">
