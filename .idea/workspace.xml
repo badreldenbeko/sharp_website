@@ -3,23 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5fb8376f-7009-43c7-aa97-9752b44171f3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/contacts/locale/ar/LC_MESSAGES/django.mo" afterPath="$PROJECT_DIR$/contacts/locale/ar/LC_MESSAGES/django.mo" />
-      <change beforePath="$PROJECT_DIR$/contacts/locale/ar/LC_MESSAGES/django.po" afterPath="$PROJECT_DIR$/contacts/locale/ar/LC_MESSAGES/django.po" />
-      <change beforePath="$PROJECT_DIR$/contacts/locale/en/LC_MESSAGES/django.mo" afterPath="$PROJECT_DIR$/contacts/locale/en/LC_MESSAGES/django.mo" />
-      <change beforePath="$PROJECT_DIR$/contacts/locale/en/LC_MESSAGES/django.po" afterPath="$PROJECT_DIR$/contacts/locale/en/LC_MESSAGES/django.po" />
-      <change beforePath="$PROJECT_DIR$/home/locale/ar/LC_MESSAGES/django.mo" afterPath="$PROJECT_DIR$/home/locale/ar/LC_MESSAGES/django.mo" />
-      <change beforePath="$PROJECT_DIR$/home/locale/ar/LC_MESSAGES/django.po" afterPath="$PROJECT_DIR$/home/locale/ar/LC_MESSAGES/django.po" />
-      <change beforePath="$PROJECT_DIR$/home/locale/en/LC_MESSAGES/django.mo" afterPath="$PROJECT_DIR$/home/locale/en/LC_MESSAGES/django.mo" />
-      <change beforePath="$PROJECT_DIR$/home/locale/en/LC_MESSAGES/django.po" afterPath="$PROJECT_DIR$/home/locale/en/LC_MESSAGES/django.po" />
-      <change beforePath="$PROJECT_DIR$/locale/ar/LC_MESSAGES/django.mo" afterPath="$PROJECT_DIR$/locale/ar/LC_MESSAGES/django.mo" />
-      <change beforePath="$PROJECT_DIR$/locale/ar/LC_MESSAGES/django.po" afterPath="$PROJECT_DIR$/locale/ar/LC_MESSAGES/django.po" />
-      <change beforePath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.mo" afterPath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.mo" />
-      <change beforePath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" afterPath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" />
-      <change beforePath="$PROJECT_DIR$/services/locale/ar/LC_MESSAGES/django.mo" afterPath="$PROJECT_DIR$/services/locale/ar/LC_MESSAGES/django.mo" />
-      <change beforePath="$PROJECT_DIR$/services/locale/ar/LC_MESSAGES/django.po" afterPath="$PROJECT_DIR$/services/locale/ar/LC_MESSAGES/django.po" />
-      <change beforePath="$PROJECT_DIR$/services/locale/en/LC_MESSAGES/django.mo" afterPath="$PROJECT_DIR$/services/locale/en/LC_MESSAGES/django.mo" />
-      <change beforePath="$PROJECT_DIR$/services/locale/en/LC_MESSAGES/django.po" afterPath="$PROJECT_DIR$/services/locale/en/LC_MESSAGES/django.po" />
-      <change beforePath="$PROJECT_DIR$/services/templates/services/price/princing_include.html" afterPath="$PROJECT_DIR$/services/templates/services/price/princing_include.html" />
+      <change beforePath="$PROJECT_DIR$/services/templates/services/service/detail.html" afterPath="$PROJECT_DIR$/services/templates/services/service/detail.html" />
     </list>
     <ignored path=".idea/" />
     <ignored path="db.sqlite3" />
@@ -110,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/templates/services/service/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="135" column="45" lean-forward="false" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
+            <state relative-caret-position="147">
+              <caret line="80" column="62" lean-forward="false" selection-start-line="80" selection-start-column="62" selection-end-line="80" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -130,7 +114,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="django.po" pinned="false" current-in-tab="true">
+      <file leaf-file-name="django.po" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/locale/ar/LC_MESSAGES/django.po">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -250,10 +234,10 @@
         <option value="$PROJECT_DIR$/contacts/views.py" />
         <option value="$PROJECT_DIR$/home/templates/base.html" />
         <option value="$PROJECT_DIR$/home/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/services/templates/services/service/detail.html" />
         <option value="$PROJECT_DIR$/home/static/home/css/style.css" />
         <option value="$PROJECT_DIR$/services/templates/services/price/princing_include.html" />
         <option value="$PROJECT_DIR$/services/locale/ar/LC_MESSAGES/django.po" />
+        <option value="$PROJECT_DIR$/services/templates/services/service/detail.html" />
       </list>
     </option>
   </component>
@@ -651,13 +635,6 @@
       <option name="presentableId" value="Default" />
       <updated>1522438363869</updated>
     </task>
-    <task id="LOCAL-00041" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
-      <created>1524097879585</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1524097879585</updated>
-    </task>
     <task id="LOCAL-00042" summary="Filtering.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
       <created>1524097969338</created>
       <option name="number" value="00042" />
@@ -994,7 +971,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524104579536</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="edit price badge.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;">
+      <created>1524105131387</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1524105131387</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1008,6 +992,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.505295" order="7" side_tool="true" content_ui="tabs" />
@@ -1017,7 +1002,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.494705" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26701966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@sharp_website" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@sharp_website" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1088,7 +1073,8 @@
     <MESSAGE value="Login page styling.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
     <MESSAGE value="Edit service detail page.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
     <MESSAGE value="navbar brand&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="navbar brand&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
+    <MESSAGE value="edit price badge.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit price badge.&#10;Signed-off-by: Badrelden Ahmed &lt;badrelden@hotmail.com&gt;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1246,6 +1232,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="134" column="20" lean-forward="false" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,6 +1285,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1440,14 +1428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/templates/services/service/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="135" column="45" lean-forward="false" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/static/home/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1468,6 +1448,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="108" column="15" lean-forward="false" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/templates/services/service/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="80" column="62" lean-forward="false" selection-start-line="80" selection-start-column="62" selection-end-line="80" selection-end-column="62" />
           <folding />
         </state>
       </provider>
