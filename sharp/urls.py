@@ -30,6 +30,7 @@ urlpatterns = i18n_patterns(
     path('rosetta/', include('rosetta.urls')),
     path('services/', include('services.services_urls', namespace='service')),
     path('post/', include('services.post_urls', namespace='post')),
+    path('comment/', include('services.comment_urls', namespace='comment')),
     path('price/', include('services.pricing-urls', namespace='price')),
     path('contact/', include('contacts.urls', namespace='contact')),
     path('ckeditor/', include('ckeditor_uploader.urls')),

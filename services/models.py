@@ -38,6 +38,31 @@ def pre_save_service_receiver(sender, instance, *args, **kwargs):
 pre_save.connect(pre_save_service_receiver, sender=Service)
 
 
+class ServiceClient(models.Model):
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='clients')
+    en_client_name = models.CharField(max_length=250)
+    ar_client_name = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=200, db_index=True, unique=True)
+    logo = models.ImageField(upload_to=upload_location, blank=True, null=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.en_client_name
+
+    @property
+    def title(self):
+        return self.en_client_name
+
+
+def pre_save_service_client_receiver(sender, instance, *args, **kwargs):
+    if not instance.slug:
+        instance.slug = unique_slug_generator(instance)
+
+
+pre_save.connect(pre_save_service_client_receiver, sender=ServiceClient)
+
+
 class ServicePost(models.Model):
     service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='posts')
     en_title = models.CharField(max_length=200)
@@ -66,6 +91,18 @@ def pre_save_service_post_receiver(sender, instance, *args, **kwargs):
 
 
 pre_save.connect(pre_save_service_post_receiver, sender=ServicePost)
+
+
+class ServicePostComment(models.Model):
+    service_post = models.ForeignKey(ServicePost, on_delete=models.CASCADE, related_name='comments')
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    comment = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
 
 
 class ServicePrice(models.Model):

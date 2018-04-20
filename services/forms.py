@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from ckeditor.widgets import CKEditorWidget
-from .models import Service, ServicePost, ServicePrice
+from .models import Service, ServiceClient, ServicePost, ServicePostComment, ServicePrice
 
 
 class ServiceForm(forms.ModelForm):
@@ -13,10 +13,22 @@ class ServiceForm(forms.ModelForm):
                   'publish_pricing']
 
 
-class SercicePostForm(forms.ModelForm):
+class ServiceClientForm(forms.ModelForm):
+    class Meta:
+        model = ServiceClient
+        fields = ['en_client_name', 'ar_client_name', 'logo']
+
+
+class ServicePostForm(forms.ModelForm):
     class Meta:
         model = ServicePost
         fields = ['en_title', 'ar_title', 'en_body', 'ar_body', 'image']
+
+
+class ServicePostCommentForm(forms.ModelForm):
+    class Meta:
+        model = ServicePostComment
+        fields = ['name', 'email', 'comment']
 
 
 class ServicePriceForm(forms.ModelForm):

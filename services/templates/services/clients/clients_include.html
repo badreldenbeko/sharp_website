@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load staticfiles %}
+{% if request.user.is_authenticated %}
+    <br>
+    <div class="container">
+        <button data-toggle="modal" data-target="#serviceClientFormModal" class="btn btn-primary"><i
+                class="fa fa-plus"></i> {% trans 'Add Client' %}</button>
+        {% include 'services/clients/modal.html' %}
+    </div><br>
+{% endif %}
+
+<!-- Testimonial -->
+<div class="section">
+    <div class="container">
+        {% if service.clients.all %}
+            <div class="container text-center">
+                <h3 class="title">{% trans 'Our clients' %}</h3>
+            </div>
+        {% endif %}
+        <div class="owl-carousel owl-theme">
+            {% for client in service.clients.all %}
+                <div class="item">
+                    <div class="col-md-6 text-center" style="margin-top: 20px;">
+                        <img style="max-width: 170px" src=" {% if client.logo %}{{ client.logo.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}" alt="{{ client.en_client_name }}"/>
+                    </div>
+                </div>
+            {% empty %}
+                {% if request.user.is_authenticated %}
+                    <div class="col-sm-12 text-center">
+                        <span class="price-title">{% trans 'No clients add ...' %}</span>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

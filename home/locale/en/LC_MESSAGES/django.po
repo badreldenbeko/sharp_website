@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-19 21:40+0200\n"
+"POT-Creation-Date: 2018-04-20 04:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,27 +67,27 @@ msgstr ""
 msgid "All services"
 msgstr ""
 
-#: .\home\templates\home\home.html:163
+#: .\home\templates\home\home.html:160
 msgid "Get in touch"
 msgstr ""
 
-#: .\home\templates\home\home.html:170
+#: .\home\templates\home\home.html:167
 msgid "Phone"
 msgstr ""
 
-#: .\home\templates\home\home.html:179
+#: .\home\templates\home\home.html:177
 msgid "Email"
 msgstr ""
 
-#: .\home\templates\home\home.html:188
+#: .\home\templates\home\home.html:186
 msgid "Address"
 msgstr ""
 
-#: .\home\templates\home\home.html:189
+#: .\home\templates\home\home.html:187
 msgid "7, Ewais, Mansheya El-Bakry, Heliopolis, Cairo Governorate"
 msgstr ""
 
-#: .\home\templates\home\home.html:198
+#: .\home\templates\home\home.html:199
 msgid "Send message"
 msgstr ""
 

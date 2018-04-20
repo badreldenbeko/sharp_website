@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+    Delete comment for {{ comment.name }}
+{% endblock %}
+
+{% block content %}
+    <div class="section md-padding bg-grey">
+        <div class="container">
+            <div class="row">
+                <form method="post">
+                    {% csrf_token %}
+                    <h5>{% trans 'Are you sure You want to delete comment for' %}
+                        {{ comment.name }}</h5>
+                    <input class="btn btn-danger" type="submit" value="{% trans 'Delete' %}">
+                    <a class="btn btn-default"
+                       href="{% url 'post:post_detail_update' comment.service_post.service.slug comment.service_post.slug %}">{% trans 'Cancel' %}</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

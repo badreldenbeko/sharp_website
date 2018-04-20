@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-19 21:40+0200\n"
+"POT-Creation-Date: 2018-04-20 04:00+0200\n"
 "PO-Revision-Date: 2018-03-31 13:15+0000\n"
 "Last-Translator: b'  <badrelden@sharp4it.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,27 +74,27 @@ msgstr "لا يوجد خدمات ..."
 msgid "All services"
 msgstr "كل الخدمات"
 
-#: .\home\templates\home\home.html:163
+#: .\home\templates\home\home.html:160
 msgid "Get in touch"
 msgstr "أتصل بنا"
 
-#: .\home\templates\home\home.html:170
+#: .\home\templates\home\home.html:167
 msgid "Phone"
 msgstr "تليفون"
 
-#: .\home\templates\home\home.html:179
+#: .\home\templates\home\home.html:177
 msgid "Email"
 msgstr "البريد الالكترونى"
 
-#: .\home\templates\home\home.html:188
+#: .\home\templates\home\home.html:186
 msgid "Address"
 msgstr "العنوان"
 
-#: .\home\templates\home\home.html:189
+#: .\home\templates\home\home.html:187
 msgid "7, Ewais, Mansheya El-Bakry, Heliopolis, Cairo Governorate"
 msgstr "7 شارع عويس - منشية البكرى - القاهرة"
 
-#: .\home\templates\home\home.html:198
+#: .\home\templates\home\home.html:199
 msgid "Send message"
 msgstr "إرسال"
 
@@ -140,15 +140,3 @@ msgstr "حدث خطأ فى اسم المستخدم او كلمة المرور."
 #: .\home\templates\registration\login.html:38
 msgid "Please login or back to "
 msgstr "برجاء تسجيل الدخول أو العودة إلى "
-
-#~ msgid "47 Haron El Rashed St. - Heliopolies"
-#~ msgstr "47 شارع هارون الرشيد - مصر الجديدة"
-
-#~ msgid "Name"
-#~ msgstr "الأسم"
-
-#~ msgid "Subject"
-#~ msgstr "الموضوع"
-
-#~ msgid "Message"
-#~ msgstr "الرسالة"

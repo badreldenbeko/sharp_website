@@ -1,57 +1,61 @@
 {% load i18n %}
 <!-- Pricing -->
-    <!-- Container -->
-    <div class="container">
-        <!-- Row -->
-        <div class="row">
-            <!-- Section header -->
+<!-- Container -->
+<div class="container">
+    <!-- Row -->
+    <div class="row">
+        <!-- Section header -->
+        {% if service.prices.all %}
             <div class="section-header text-center">
                 <h2 class="title">{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
                     {{ service.en_name }}{% endif %} {% trans 'pricing' %}</h2>
             </div>
-            <!-- /Section header -->
-            {% if request.user.is_authenticated and 'services' in request.path %}
-                <div>
-                    <button data-toggle="modal" data-target="#priceFormModal" class="btn btn-primary"><i
-                            class="fa fa-plus"></i> {% trans 'Add pricing plan' %}</button>
-                    {% include 'services/price/modal.html' %}
-                </div><br>
-            {% endif %}
-            {% for price in service.prices.all %}
-                <!-- pricing -->
-                <div class="col-sm-4">
-                    <div class="pricing" style="min-height: 500px;">
-                        <div class="price-head">
+        {% endif %}
+        <!-- /Section header -->
+        {% if request.user.is_authenticated and 'services' in request.path %}
+            <div>
+                <button data-toggle="modal" data-target="#priceFormModal" class="btn btn-primary"><i
+                        class="fa fa-plus"></i> {% trans 'Add pricing plan' %}</button>
+                {% include 'services/price/modal.html' %}
+            </div><br>
+        {% endif %}
+        {% for price in service.prices.all %}
+            <!-- pricing -->
+            <div class="col-sm-4">
+                <div class="pricing" style="min-height: 500px;">
+                    <div class="price-head">
                                     <span class="price-title">{% if request.LANGUAGE_CODE == 'ar' %}
                                         {{ price.ar_price_title }}{% else %}
                                         {{ price.en_price_title }}{% endif %}</span>
-                            <div class="price">
-                                <h3 style="font-size: 28px">{{ price.price }} {% trans 'LE/Year' %}</h3>
-                            </div>
-                        </div>
-                        <div class="price-content">
-                            {% if request.LANGUAGE_CODE == 'ar' %}
-                                {{ price.ar_detail|safe }}
-                            {% else %}
-                                {{ price.en_detail|safe }}
-                            {% endif %}
-                        </div>
-                        <div class="price-btn">
-                            <a class="outline-btn" href="{{ price.get_absolute_url }}">{% trans 'Details' %}</a>
+                        <div class="price">
+                            <h3 style="font-size: 28px">{{ price.price }} {% trans 'LE/Year' %}</h3>
                         </div>
                     </div>
+                    <div class="price-content">
+                        {% if request.LANGUAGE_CODE == 'ar' %}
+                            {{ price.ar_detail|safe }}
+                        {% else %}
+                            {{ price.en_detail|safe }}
+                        {% endif %}
+                    </div>
+                    <div class="price-btn">
+                        <a class="outline-btn" href="{{ price.get_absolute_url }}">{% trans 'Details' %}</a>
+                    </div>
                 </div>
-                {% cycle '' '' '' '<br>' %}
-                <!-- /pricing -->
-            {% empty %}
+            </div>
+            {% cycle '' '' '' '<br>' %}
+            <!-- /pricing -->
+        {% empty %}
+            {% if request.user.is_authenticated %}
                 <!-- pricing -->
                 <div class="col-sm-12 text-center">
                     <span class="price-title">{% trans 'No pricing add ...' %}</span>
                 </div>
                 <!-- /pricing -->
-            {% endfor %}
-        </div>
-        <!-- Row -->
+            {% endif %}
+        {% endfor %}
     </div>
-    <!-- /Container -->
+    <!-- Row -->
+</div>
+<!-- /Container -->
 <!-- /Pricing -->

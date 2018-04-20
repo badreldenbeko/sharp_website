@@ -42,89 +42,146 @@
     <!-- /header wrapper -->
     <!-- Blog -->
     <div id="blog" class="section md-padding">
-
-        <!-- Container -->
+    <!-- Container -->
+    <div class="row">
+        <!-- Row -->
         <div class="container">
+            <!-- Main -->
+            <main id="main" class="col-md-9">
+                <div class="blog">
+                    <div class="blog-img"><img class="img-responsive" src="
 
-            <!-- Row -->
-            <div class="row">
 
-                <!-- Main -->
-                <main id="main" class="col-md-9">
-                    <div class="blog">
-                        <div class="blog-img"><img class="img-responsive" src="
-                                {% if service.image %}{{ service.image.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}"/>
-                        </div>
-                        <div class="blog-content text-justify">
-                            <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
-                                {{ service.en_name }}{% endif %}</h3>
-                            <p>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_description|linebreaks }}{% else %}
-                                {{ service.en_description }}{% endif %}</p>
-                        </div>
+
+
+
+
+
+                            {% if service.image %}{{ service.image.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}"/>
                     </div>
-                </main>
-
-                <!-- Aside -->
-                <aside id="aside" class="col-md-3">
-                    <!-- Category -->
-                    <div class="widget">
-                        <h3 class="title"><a href="{% url 'service:list_create' %}">{% trans 'Other Services' %}</a>
-                        </h3>
-                        <div class="widget-category">
-                            {% for service in services %}
-                                <a href="{{ service.get_absolute_url }}">
-                                    {% if request.LANGUAGE_CODE == 'ar' %}&nbsp; {{ service.ar_name }} &nbsp;{% else %}
-                                        &nbsp; {{ service.en_name }} &nbsp;{% endif %}</a>
-                            {% empty %}
-                                {% trans 'No other services' %}
-                            {% endfor %}
-                        </div>
+                    <div class="blog-content text-justify">
+                        <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
+                            {{ service.en_name }}{% endif %}</h3>
+                        <p>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_description|safe }}{% else %}
+                            {{ service.en_description|safe }}{% endif %}</p>
                     </div>
-                </aside>
-            </div>
-            <div class="row">
-                {% if request.user.is_authenticated %}
-                    <br>
-                    <div class="container">
-                        <button data-toggle="modal" data-target="#postFormModal" class="btn btn-primary"><i
-                                class="fa fa-edit"></i> {% trans 'Add post' %}</button>
-                        {% include 'services/post/modal.html' %}
-                    </div><br>
-                {% endif %}
-                {% for post in service.posts.all %}
-                    <!-- blog author -->
-                    <div class="blog-author">
-
-                        <div class="media" style="background: #F4F4F4;">
-                            {% if request.user.is_authenticated %}
-                                <div class="container">
-                                    <a class="btn btn-danger" href="{% url 'post:post_delete' post.slug %}"><i
-                                            class="fa fa-trash"></i> {% trans 'Delete' %}</a>
-                                </div><br>
-                            {% endif %}
-                            <div class="media-left">
-                                {% if post.image %}
-                                    <img style="max-width: 350px;" class="media-object" src="{{ post.image.url }}"
-                                         alt="{{ post.en_title }}">{% endif %}
-                            </div>
-                            <div class="media-body">
-                                <div class="media-heading">
-                                    <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_title }}{% else %}
-                                        {{ post.en_title }}{% endif %}</h3>
-                                </div>
-                                <p>{% if request.LANGUAGE_CODE == 'ar' %}
-                                    {{ post.ar_body|truncatechars:250|linebreaks }}{% else %}
-                                    {{ post.en_body|truncatechars:250|linebreaks }}{% endif %}</p>
-
-                                <a href="{{ post.get_absolute_url }}">{% trans 'Read More' %}</a>
-                            </div>
-                        </div>
+                </div>
+            </main>
+            <!-- Aside -->
+            <aside id="aside" class="col-md-3">
+                <!-- Category -->
+                <div class="widget">
+                    <h3 class="title"><a href="{% url 'service:list_create' %}">{% trans 'Other Services' %}</a>
+                    </h3>
+                    <div class="widget-category">
+                        {% for service in services %}
+                            <a href="{{ service.get_absolute_url }}">
+                                {% if request.LANGUAGE_CODE == 'ar' %}&nbsp; {{ service.ar_name }} &nbsp;{% else %}
+                                    &nbsp; {{ service.en_name }} &nbsp;{% endif %}</a>
+                        {% empty %}
+                            {% trans 'No other services' %}
+                        {% endfor %}
                     </div>
-                    <!-- /blog author -->
-                {% empty %}
-                {% endfor %}
-            </div>
+                </div>
+            </aside>
         </div>
-
+        <br>
+        {% include 'services/clients/clients_include.html' %}
         {% include 'services/price/princing_include.html' %}
+        <div class="container">
+            {% if request.user.is_authenticated %}
+                <br>
+                <div class="container">
+                    <button data-toggle="modal" data-target="#postFormModal" class="btn btn-primary"><i
+                            class="fa fa-edit"></i> {% trans 'Add post' %}</button>
+                    {% include 'services/post/modal.html' %}
+                </div><br>
+            {% endif %}
+            {% for post in service.posts.all %}
+                <!-- blog author -->
+                <div class="blog-author">
+                    <div class="media" style="background: #F4F4F4;">
+                        {% if request.user.is_authenticated %}
+                            <div class="container">
+                                <a class="btn btn-danger" href="{% url 'post:post_delete' post.slug %}"><i
+                                        class="fa fa-trash"></i> {% trans 'Delete' %}</a>
+                            </div><br>
+                        {% endif %}
+                        <div class="media-left">
+                            <img style="max-width: 350px;" class="media-object"
+                                 src="{% if post.image %}{{ post.image.url }}"
+                                     alt="{{ post.en_title }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}">
+                        </div>
+                        <div class="media-body">
+                            <div class="media-heading">
+                                <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_title }}{% else %}
+                                    {{ post.en_title }}{% endif %}</h3>
+                            </div>
+                            <p>{% if request.LANGUAGE_CODE == 'ar' %}
+                                {{ post.ar_body|truncatechars:250|safe }}{% else %}
+                                {{ post.en_body|truncatechars:250|safe }}{% endif %}</p>
+                            <a href="{{ post.get_absolute_url }}">{% trans 'Read More' %}</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /blog author -->
+            {% empty %}
+                {% if request.user.is_authenticated %}
+                    <!-- pricing -->
+                    <div class="col-sm-12 text-center">
+                        <span class="price-title">{% trans 'No posts add ...' %}</span>
+                    </div>
+                    <!-- /pricing -->
+                {% endif %}
+            {% endfor %}
+        </div>
+        <br>
+    </div>
+{% endblock %}
+
+{% block js %}
+    {% if request.LANGUAGE_CODE == 'ar' %}
+        <script type="text/javascript">
+            $('.owl-carousel').owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                loop: true,
+                margin: 10,
+                rtl: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: {% if service.clients.count > 2 %}3{% else %}1{% endif %}
+                    }
+                }
+            })
+        </script>
+    {% else %}
+        <script type="text/javascript">
+            $('.owl-carousel').owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                loop: true,
+                margin: 10,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: {% if service.clients.count > 2 %}3{% else %}1{% endif %}
+                    }
+                }
+            })
+        </script>
+    {% endif %}
 {% endblock %}
