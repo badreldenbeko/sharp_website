@@ -4,6 +4,7 @@ from django.db.models.signals import pre_save
 from django.urls import reverse
 from ckeditor.fields import RichTextField
 from sharp.utls import unique_slug_generator, upload_location, get_video_name
+from contacts.models import Contact
 
 
 # Create your models here.
@@ -39,28 +40,13 @@ pre_save.connect(pre_save_service_receiver, sender=Service)
 
 
 class ServiceClient(models.Model):
-    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='clients')
-    en_client_name = models.CharField(max_length=250)
-    ar_client_name = models.CharField(max_length=250)
-    slug = models.SlugField(max_length=200, db_index=True, unique=True)
-    logo = models.ImageField(upload_to=upload_location, blank=True, null=True)
+    service = models.ForeignKey(Service, on_delete=None, related_name='services', blank=True, null=True)
+    client = models.ForeignKey(Contact, on_delete=models.CASCADE, related_name='clients')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.en_client_name
-
-    @property
-    def title(self):
-        return self.en_client_name
-
-
-def pre_save_service_client_receiver(sender, instance, *args, **kwargs):
-    if not instance.slug:
-        instance.slug = unique_slug_generator(instance)
-
-
-pre_save.connect(pre_save_service_client_receiver, sender=ServiceClient)
+        return self.client.en_contact_name
 
 
 class ServicePost(models.Model):

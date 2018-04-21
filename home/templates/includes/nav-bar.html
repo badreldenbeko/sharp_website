@@ -58,8 +58,9 @@
             <li>
                 {% for language in languages %}
                     <li>
-                        <a class="text-primary" href="/{{ language.code }}{{ request.path|slice:"3:" }}"><img style="max-width: 17px"
-                                                                                 src="/static/home/image/lang-{{ language.code }}.png"/></a>
+                        <a class="text-primary" href="/{{ language.code }}{{ request.path|slice:"3:" }}"><img
+                                style="max-width: 17px"
+                                src="/static/home/image/lang-{{ language.code }}.png"/></a>
                     </li>
                 {% endfor %}
             </li>

@@ -6,5 +6,5 @@ from .views import service_client_delete
 app_name = 'services'
 
 urlpatterns = [
-    path('<slug:slug>/delete/', service_client_delete, name='delete'),
+    path('<int:pk>/delete/', service_client_delete, name='delete'),
 ]

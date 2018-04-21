@@ -28,12 +28,22 @@
             <h3>{% trans 'Email' %} {{ contact.email }}</h3>
             <p class="text-muted">{% trans 'Created from' %} {{ contact.created|timesince }}</p>
             <p class="text-muted">{% trans 'Last update' %} {{ contact.updated }}</p>
-            <p>{{ contact.message|linebreaks }}</p>
-            <form method="post">
+            <p>{% trans 'Last email subject:' %} <small>{{ contact.subject }}</small></p>
+            <p>{% trans 'Last message:' %} <small>{{ contact.message }}</small></p>
+            <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ contact_form.as_p }}
                 <button class="main-btn" type="submit">{% trans 'Save' %}</button>
             </form>
+        </div>
+    </div>
+    <div class="header-wrapper sm-padding bg-grey">
+        <div class="container">
+        <h3>Client services</h3>
+            {% for service in contact.clients.all %}
+                <p>{{ service.service }}</p>
+            {% empty %}
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

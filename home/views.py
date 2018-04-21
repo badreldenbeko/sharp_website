@@ -2,6 +2,7 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 
 from contacts.forms import ContactForm
+from contacts.models import Contact
 from services.models import Service, ServiceClient
 
 
@@ -15,11 +16,11 @@ def home(request):
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
-            contact = contact_form.save(commit=False)
-            name = contact.name
-            email = contact.email
-            subject = contact.subject + ' from website'
-            sent_message = contact.message
+            cd = contact_form.cleaned_data
+            name = cd['en_contact_name']
+            email = cd['email']
+            subject = cd['subject'] + ' from website'
+            sent_message = cd['message']
             message = """
                 Message from : {} \n
                 Email address : {} \n
@@ -27,8 +28,15 @@ def home(request):
                 message : {}
             """.format(name, email, subject, sent_message)
             send_mail(subject, message, 'info@sharp4it.com', ['info@sharp4it.com'])
-            contact.save()
-            return redirect('/#contact')
+            contact = Contact.objects.filter(email=email)
+            if not contact:
+                Contact.objects.create(en_contact_name=name, email=email, subject=subject, message='message')
+                return redirect('/#contact')
+            else:
+                contact.subject = subject
+                contact.message = message
+                contact.save()
+                return redirect('/#contact')
     return render(request, 'home/home.html', {'section': section,
                                               'published_services': published_services,
                                               'services': services,

@@ -50,15 +50,6 @@
             <main id="main" class="col-md-9">
                 <div class="blog">
                     <div class="blog-img"><img class="img-responsive" src="
-
-
-
-
-
-
-
-
-
                             {% if service.image %}{{ service.image.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}"/>
                     </div>
                     <div class="blog-content text-justify">
@@ -161,7 +152,7 @@
                         items: 2
                     },
                     1000: {
-                        items: {% if service.clients.count > 2 %}3{% else %}1{% endif %}
+                        items: {% if service_clients.count > 2 %}3{% else %}1{% endif %}
                     }
                 }
             })
@@ -182,7 +173,7 @@
                         items: 2
                     },
                     1000: {
-                        items: {% if service.clients.count > 2 %}3{% else %}1{% endif %}
+                        items: {% if service_clients.count > 2 %}3{% else %}1{% endif %}
                     }
                 }
             })

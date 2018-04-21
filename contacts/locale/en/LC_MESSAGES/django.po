@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 15:18+0200\n"
+"POT-Creation-Date: 2018-04-21 20:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,17 +40,17 @@ msgid "All contacts"
 msgstr ""
 
 #: .\contacts\templates\contacts\edit.html:27
-#: .\contacts\templates\contacts\list.html:49
+#: .\contacts\templates\contacts\list.html:54
 msgid "Contact"
 msgstr ""
 
 #: .\contacts\templates\contacts\edit.html:28
-#: .\contacts\templates\contacts\list.html:55
+#: .\contacts\templates\contacts\list.html:60
 msgid "Email"
 msgstr ""
 
 #: .\contacts\templates\contacts\edit.html:29
-#: .\contacts\templates\contacts\list.html:58
+#: .\contacts\templates\contacts\list.html:63
 msgid "Created from"
 msgstr ""
 
@@ -58,46 +58,64 @@ msgstr ""
 msgid "Last update"
 msgstr ""
 
-#: .\contacts\templates\contacts\edit.html:35
+#: .\contacts\templates\contacts\edit.html:31
+msgid "Last email subject:"
+msgstr ""
+
+#: .\contacts\templates\contacts\edit.html:32
+msgid "Last message:"
+msgstr ""
+
+#: .\contacts\templates\contacts\edit.html:36
+#: .\contacts\templates\contacts\modal.html:21
 msgid "Save"
 msgstr ""
 
-#: .\contacts\templates\contacts\list.html:34
+#: .\contacts\templates\contacts\list.html:25
+msgid "Add Contact"
+msgstr ""
+
+#: .\contacts\templates\contacts\list.html:39
 msgid "Filters"
 msgstr ""
 
-#: .\contacts\templates\contacts\list.html:37
+#: .\contacts\templates\contacts\list.html:42
 msgid "All"
 msgstr ""
 
-#: .\contacts\templates\contacts\list.html:40
+#: .\contacts\templates\contacts\list.html:45
+#: .\contacts\templates\contacts\list.html:62
 msgid "Replayed"
 msgstr ""
 
-#: .\contacts\templates\contacts\list.html:43
+#: .\contacts\templates\contacts\list.html:48
 msgid "Not replayed"
 msgstr ""
 
-#: .\contacts\templates\contacts\list.html:48
+#: .\contacts\templates\contacts\list.html:53
 msgid "Total"
 msgstr ""
 
-#: .\contacts\templates\contacts\list.html:54
+#: .\contacts\templates\contacts\list.html:59
 msgid "Name"
 msgstr ""
 
-#: .\contacts\templates\contacts\list.html:56
+#: .\contacts\templates\contacts\list.html:61
 msgid "Subject"
 msgstr ""
 
-#: .\contacts\templates\contacts\list.html:57
-msgid "Replyed"
-msgstr ""
-
-#: .\contacts\templates\contacts\list.html:69
+#: .\contacts\templates\contacts\list.html:74
 msgid "Ago"
 msgstr ""
 
-#: .\contacts\templates\contacts\list.html:81
+#: .\contacts\templates\contacts\list.html:86
 msgid "There is no contacts..."
+msgstr ""
+
+#: .\contacts\templates\contacts\modal.html:9
+msgid "Client"
+msgstr ""
+
+#: .\contacts\templates\contacts\modal.html:20
+msgid "Close"
 msgstr ""

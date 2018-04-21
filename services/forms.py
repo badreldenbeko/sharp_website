@@ -5,8 +5,6 @@ from .models import Service, ServiceClient, ServicePost, ServicePostVideo, Servi
 
 
 class ServiceForm(forms.ModelForm):
-    en_description = forms.CharField(widget=CKEditorWidget())
-
     class Meta:
         model = Service
         fields = ['en_name', 'ar_name', 'en_description', 'ar_description', 'image', 'publish_on_home',
@@ -16,7 +14,7 @@ class ServiceForm(forms.ModelForm):
 class ServiceClientForm(forms.ModelForm):
     class Meta:
         model = ServiceClient
-        fields = ['en_client_name', 'ar_client_name', 'logo']
+        fields = ['client']
 
 
 class ServicePostForm(forms.ModelForm):
@@ -29,7 +27,6 @@ class ServicePostVideoForm(forms.ModelForm):
     class Meta:
         model = ServicePostVideo
         fields = ['en_video_name', 'ar_video_name', 'link']
-
 
 
 class ServicePostCommentForm(forms.ModelForm):

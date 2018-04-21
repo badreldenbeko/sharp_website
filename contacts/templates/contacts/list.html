@@ -20,7 +20,12 @@
         <!-- Container -->
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
+                    <button data-toggle="modal" data-target="#contactFormModal" class="btn btn-primary"><i
+                                class="fa fa-plus"></i> {% trans 'Add Contact' %}</button>
+                    {% include 'contacts/modal.html' %}
+                </div>
+                <div class="col-md-4">
                     <form method="get" class="form-inline" action=".">
                         <div class="form-group mb-2">
                             <input type="text" name="query" placeholder="Search" class="form-control"
@@ -29,7 +34,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="col-md-2 text-left">
                         {% trans 'Filters' %}
                     </div>
@@ -54,14 +59,14 @@
                     <th>{% trans 'Name' %}</th>
                     <th>{% trans 'Email' %}</th>
                     <th>{% trans 'Subject' %}</th>
-                    <th>{% trans 'Replyed' %}</th>
+                    <th>{% trans 'Replayed' %}</th>
                     <th colspan="2">{% trans 'Created from' %}</th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for contact in contacts %}
                     <tr>
-                        <td>{{ contact.name }}</td>
+                        <td>{{ contact.en_contact_name }}</td>
                         <td>{{ contact.email }}</td>
                         <td>{{ contact.subject }}</td>
                         <td>{% if contact.replayed %}<i class="fa fa-check-circle text-success"></i>{% else %}

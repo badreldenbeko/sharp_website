@@ -1,7 +1,6 @@
 {% load i18n %}
-{% load crispy_forms_tags %}
 <!-- Modal -->
-<div style="z-index: 100000;" class="modal fade" id="serviceClientFormModal" tabindex="-1" role="dialog"
+<div style="z-index: 100000;" class="modal fade" id="contactFormModal" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -15,7 +14,7 @@
             <form method="post" enctype="multipart/form-data">
                 <div class="modal-body">
                     {% csrf_token %}
-                    {{ client_form|crispy }}
+                    {{ contact_form.as_p }}
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans 'Close' %}</button>

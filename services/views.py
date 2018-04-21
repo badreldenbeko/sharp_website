@@ -2,8 +2,8 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 
-from .forms import ServiceForm, ServiceClientForm, ServicePostForm, ServicePostVideoForm, ServicePostCommentForm, \
-    ServicePriceForm
+from .forms import ServiceForm, ServicePostForm, ServicePostVideoForm, ServicePostCommentForm, \
+    ServicePriceForm, ServiceClientForm
 from .models import Service, ServiceClient, ServicePost, ServicePostVideo, ServicePostComment, ServicePrice
 
 
@@ -25,6 +25,7 @@ def service_detail_update(request, slug):
     post_form = ServicePostForm(request.POST or None, request.FILES or None)
     price_form = ServicePriceForm(request.POST or None)
     client_form = ServiceClientForm(request.POST or None, request.FILES or None)
+    service_clients = ServiceClient.objects.filter(service=service)
     if request.method == 'POST':
         if service_form.is_valid():
             service_form.save()
@@ -49,7 +50,8 @@ def service_detail_update(request, slug):
                                                             'service_form': service_form,
                                                             'post_form': post_form,
                                                             'price_form': price_form,
-                                                            'client_form': client_form})
+                                                            'client_form': client_form,
+                                                            'service_clients': service_clients})
 
 
 @login_required
@@ -142,8 +144,8 @@ def service_price_delete(request, slug):
 
 
 @login_required
-def service_client_delete(request, slug):
-    client = get_object_or_404(ServiceClient, slug=slug)
+def service_client_delete(request, pk):
+    client = get_object_or_404(ServiceClient, pk=pk)
     services = Service.objects.all()
     if request.method == 'POST':
         client.delete()

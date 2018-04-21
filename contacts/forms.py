@@ -4,13 +4,15 @@ from django import forms
 from .models import Contact
 
 
-class ContactForm(forms.ModelForm):
-    class Meta:
-        model = Contact
-        fields = ['name', 'email', 'subject', 'message']
+class ContactForm(forms.Form):
+    en_contact_name = forms.CharField(max_length=250)
+    phone = forms.IntegerField()
+    email = forms.EmailField()
+    subject = forms.CharField(max_length=250)
+    message = forms.CharField(widget=forms.Textarea)
 
 
-class ContactReplayForm(forms.ModelForm):
+class ContactCreateForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ['replayed']
+        fields = ['en_contact_name', 'ar_contact_name', 'email', 'replayed', 'image']

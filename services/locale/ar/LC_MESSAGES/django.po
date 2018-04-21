@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 15:18+0200\n"
+"POT-Creation-Date: 2018-04-21 20:56+0200\n"
 "PO-Revision-Date: 2018-04-04 15:50+0000\n"
 "Last-Translator: b'  <badrelden@sharp4it.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr "إضافة عميل"
 msgid "Our clients"
 msgstr "عملائنا"
 
-#: .\services\templates\services\clients\clients_include.html:24
+#: .\services\templates\services\clients\clients_include.html:27
 #: .\services\templates\services\clients\delete.html:16
 #: .\services\templates\services\comment\delete.html:16
 #: .\services\templates\services\post\delete.html:17
@@ -38,12 +38,19 @@ msgstr "عملائنا"
 #: .\services\templates\services\price\detail.html:37
 #: .\services\templates\services\service\delete.html:17
 #: .\services\templates\services\service\detail.html:38
-#: .\services\templates\services\service\detail.html:109
+#: .\services\templates\services\service\detail.html:100
 #: .\services\templates\services\videos\delete.html:16
 msgid "Delete"
 msgstr "حذف"
 
-#: .\services\templates\services\clients\clients_include.html:31
+#: .\services\templates\services\clients\clients_include.html:28
+#: .\services\templates\services\post\detail.html:36
+#: .\services\templates\services\price\detail.html:34
+#: .\services\templates\services\service\detail.html:35
+msgid "Edit"
+msgstr "تعديل"
+
+#: .\services\templates\services\clients\clients_include.html:40
 msgid "No clients add ..."
 msgstr "لا يوجد عملاء ..."
 
@@ -60,11 +67,11 @@ msgstr "هل تريد حذف عميل"
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: .\services\templates\services\clients\modal.html:9
+#: .\services\templates\services\clients\modal.html:10
 msgid "Client"
 msgstr "عميل"
 
-#: .\services\templates\services\clients\modal.html:20
+#: .\services\templates\services\clients\modal.html:21
 #: .\services\templates\services\comment\modal.html:20
 #: .\services\templates\services\post\modal.html:25
 #: .\services\templates\services\price\modal.html:25
@@ -73,7 +80,7 @@ msgstr "عميل"
 msgid "Close"
 msgstr "اغلاق"
 
-#: .\services\templates\services\clients\modal.html:21
+#: .\services\templates\services\clients\modal.html:22
 #: .\services\templates\services\post\modal.html:26
 #: .\services\templates\services\price\modal.html:26
 #: .\services\templates\services\service\modal.html:25
@@ -103,14 +110,8 @@ msgstr "هل تريد حذف خدمة"
 msgid "All services"
 msgstr "خدمات"
 
-#: .\services\templates\services\post\detail.html:36
-#: .\services\templates\services\price\detail.html:34
-#: .\services\templates\services\service\detail.html:35
-msgid "Edit"
-msgstr "تعديل"
-
 #: .\services\templates\services\post\detail.html:71
-#: .\services\templates\services\service\detail.html:125
+#: .\services\templates\services\service\detail.html:116
 msgid "Videos"
 msgstr "فيديوهات"
 
@@ -172,23 +173,23 @@ msgstr "ج.م/سنة"
 msgid "No pricing add ..."
 msgstr "لا يوجد خطط اسعار ..."
 
-#: .\services\templates\services\service\detail.html:76
+#: .\services\templates\services\service\detail.html:67
 msgid "Other Services"
 msgstr "خدمات أخرى"
 
-#: .\services\templates\services\service\detail.html:84
+#: .\services\templates\services\service\detail.html:75
 msgid "No other services"
 msgstr "لا يوجد خدمات اخرى ..."
 
-#: .\services\templates\services\service\detail.html:98
+#: .\services\templates\services\service\detail.html:89
 msgid "Add post"
 msgstr "اضف خبر"
 
-#: .\services\templates\services\service\detail.html:127
+#: .\services\templates\services\service\detail.html:118
 msgid "Read More"
 msgstr "المزيد"
 
-#: .\services\templates\services\service\detail.html:136
+#: .\services\templates\services\service\detail.html:127
 msgid "No posts add ..."
 msgstr "لا يوجد مقالات ..."
 

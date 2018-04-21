@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block title %}
-    Delete {{ client.en_client_name }}
+    Delete {{ client }}
 {% endblock %}
 
 {% block content %}
@@ -12,10 +12,10 @@
                 <form method="post">
                     {% csrf_token %}
                     <h5>{% trans 'Are you sure You want to delete client' %}
-                        {{ client.en_client_name }}</h5>
+                        {{ client }}</h5>
                     <input class="btn btn-danger" type="submit" value="{% trans 'Delete' %}">
                     <a class="btn btn-default"
-                       href="{% url 'service:detail' client.service.slug %}">{% trans 'Cancel' %}</a>
+                       href="{% url 'contact:list' %}">{% trans 'Cancel' %}</a>
                 </form>
 
             </div>
