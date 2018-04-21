@@ -21,8 +21,8 @@
                         <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ service.ar_name }}{% else %}
                             {{ service.en_name }}{% endif %}</h3>
                         <p>{% if request.LANGUAGE_CODE == 'ar' %}
-                            {{ service.ar_description|truncatechars:100|linebreaks }}{% else %}
-                            {{ service.en_description|truncatechars:100|linebreaks }}{% endif %}</p>
+                            {{ service.ar_description|truncatechars:100|safe }}{% else %}
+                            {{ service.en_description|truncatechars:100|safe }}{% endif %}</p>
                         <a href="{{ service.get_absolute_url }}">{% trans 'Read more' %}</a>
                     </div>
                 </div>
