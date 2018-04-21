@@ -6,7 +6,7 @@ from .models import Contact
 
 class ContactForm(forms.Form):
     en_contact_name = forms.CharField(max_length=250)
-    phone = forms.IntegerField()
+    phone = forms.CharField(max_length=11)
     email = forms.EmailField()
     subject = forms.CharField(max_length=250)
     message = forms.CharField(widget=forms.Textarea)
