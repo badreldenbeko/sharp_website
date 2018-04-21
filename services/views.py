@@ -2,8 +2,9 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 
-from .forms import ServiceForm, ServiceClientForm, ServicePostForm, ServicePostCommentForm, ServicePriceForm
-from .models import Service, ServicePost, ServicePostComment, ServicePrice
+from .forms import ServiceForm, ServiceClientForm, ServicePostForm, ServicePostVideoForm, ServicePostCommentForm, \
+    ServicePriceForm
+from .models import Service, ServiceClient, ServicePost, ServicePostVideo, ServicePostComment, ServicePrice
 
 
 # Create your views here.
@@ -67,6 +68,7 @@ def service_post_detail_update(request, post_slug, service_slug):
     post = get_object_or_404(ServicePost, slug=post_slug)
     post_form = ServicePostForm(request.POST or None, request.FILES or None, instance=post)
     comment_form = ServicePostCommentForm(request.POST or None)
+    video_form = ServicePostVideoForm(request.POST or None)
     if request.method == 'POST' and request.user.is_authenticated:
         if post_form.is_valid():
             post_form.save()
@@ -76,9 +78,14 @@ def service_post_detail_update(request, post_slug, service_slug):
             new_comment.service_post = post
             new_comment.save()
             return redirect('/{}/post/{}/{}/detail'.format(request.LANGUAGE_CODE, service.slug, post.slug))
+        if video_form.is_valid():
+            new_video = video_form.save(commit=False)
+            new_video.post = post
+            new_video.save()
+            return redirect('/{}/post/{}/{}/detail'.format(request.LANGUAGE_CODE, service.slug, post.slug))
     return render(request, 'services/post/detail.html',
                   {'service': service, 'services': services, 'post': post, 'post_form': post_form,
-                   'comment_form': comment_form})
+                   'comment_form': comment_form, 'video_form': video_form})
 
 
 @login_required
@@ -89,6 +96,16 @@ def service_post_delete(request, post_slug):
         post.delete()
         return redirect('/{}/services/{}/detail/'.format(request.LANGUAGE_CODE, post.service.slug))
     return render(request, 'services/post/delete.html', {'post': post, 'services': services})
+
+
+@login_required
+def post_video_delete(request, pk):
+    video = get_object_or_404(ServicePostVideo, pk=pk)
+    if request.method == 'POST':
+        video.delete()
+        return redirect('/{}/post/{}/{}/detail'.format(request.LANGUAGE_CODE, video.post.service.slug,
+                                                       video.post.slug))
+    return render(request, 'services/videos/delete.html', {'video': video})
 
 
 def service_price_detail(request, slug):
@@ -122,3 +139,13 @@ def service_price_delete(request, slug):
         price.delete()
         return redirect('/{}/services/{}/detail/'.format(request.LANGUAGE_CODE, price.service.slug))
     return render(request, 'services/price/delete.html', {'price': price, 'services': services})
+
+
+@login_required
+def service_client_delete(request, slug):
+    client = get_object_or_404(ServiceClient, slug=slug)
+    services = Service.objects.all()
+    if request.method == 'POST':
+        client.delete()
+        return redirect('/{}/services/{}/detail/'.format(request.LANGUAGE_CODE, client.service.slug))
+    return render(request, 'services/clients/delete.html', {'client': client, 'services': services})

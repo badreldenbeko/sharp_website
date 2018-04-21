@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-20 04:00+0200\n"
+"POT-Creation-Date: 2018-04-21 15:18+0200\n"
 "PO-Revision-Date: 2018-03-31 13:15+0000\n"
 "Last-Translator: b'  <badrelden@sharp4it.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,11 +37,11 @@ msgstr "سوف نقوم بترتيب شركتك للتحكم في موارد أ�
 msgid "Home"
 msgstr "الرئيسية"
 
-#: .\home\templates\home\home.html:16
+#: .\home\templates\includes\abou.html:8
 msgid "Why Choose Sharp4IT"
 msgstr "لماذا الشارب لحلول الاعمال"
 
-#: .\home\templates\home\home.html:18
+#: .\home\templates\includes\abou.html:10
 msgid ""
 "Sharp4IT is leading a new concept in the market; we are a Technology system "
 "integrator company that offers a wide range of technology to business "
@@ -57,44 +57,27 @@ msgstr ""
 "التسويق والمبيعات اللذين يغطون جانب كبير من الاعمال الخاصة والحكومية على حد "
 "سواء."
 
-#: .\home\templates\home\home.html:110
-#: .\home\templates\includes\nav-bar.html:32
-msgid "Our Services"
-msgstr "خدماتنا"
-
-#: .\home\templates\home\home.html:123
-msgid "Read more"
-msgstr "أقرأ المزيد"
-
-#: .\home\templates\home\home.html:128
-msgid "No services published ..."
-msgstr "لا يوجد خدمات ..."
-
-#: .\home\templates\home\home.html:134
-msgid "All services"
-msgstr "كل الخدمات"
-
-#: .\home\templates\home\home.html:160
+#: .\home\templates\includes\contact_us.html:9
 msgid "Get in touch"
 msgstr "أتصل بنا"
 
-#: .\home\templates\home\home.html:167
+#: .\home\templates\includes\contact_us.html:16
 msgid "Phone"
 msgstr "تليفون"
 
-#: .\home\templates\home\home.html:177
+#: .\home\templates\includes\contact_us.html:26
 msgid "Email"
 msgstr "البريد الالكترونى"
 
-#: .\home\templates\home\home.html:186
+#: .\home\templates\includes\contact_us.html:35
 msgid "Address"
 msgstr "العنوان"
 
-#: .\home\templates\home\home.html:187
+#: .\home\templates\includes\contact_us.html:36
 msgid "7, Ewais, Mansheya El-Bakry, Heliopolis, Cairo Governorate"
 msgstr "7 شارع عويس - منشية البكرى - القاهرة"
 
-#: .\home\templates\home\home.html:199
+#: .\home\templates\includes\contact_us.html:48
 msgid "Send message"
 msgstr "إرسال"
 
@@ -105,6 +88,11 @@ msgstr "جميع الحقوق محفوظة لشركة ال-شارب 2018"
 #: .\home\templates\includes\nav-bar.html:29
 msgid "About"
 msgstr "عن الشركة"
+
+#: .\home\templates\includes\nav-bar.html:32
+#: .\home\templates\includes\services.html:13
+msgid "Our Services"
+msgstr "خدماتنا"
 
 #: .\home\templates\includes\nav-bar.html:34
 msgid "All Services"
@@ -132,6 +120,34 @@ msgstr "تسجيل الخروج"
 #: .\home\templates\registration\login.html:46
 msgid "Login"
 msgstr "تسجيل الدخول"
+
+#: .\home\templates\includes\numbers.html:23
+msgid "Our Clients"
+msgstr "عملائنا"
+
+#: .\home\templates\includes\numbers.html:33
+msgid "Total Services"
+msgstr "كل الخدمات"
+
+#: .\home\templates\includes\numbers.html:43
+msgid "Cups of Coffee"
+msgstr "فناجيل القهوة"
+
+#: .\home\templates\includes\numbers.html:53
+msgid "Projects completed"
+msgstr "مشروعات مكتملة"
+
+#: .\home\templates\includes\services.html:26
+msgid "Read more"
+msgstr "أقرأ المزيد"
+
+#: .\home\templates\includes\services.html:31
+msgid "No services published ..."
+msgstr "لا يوجد خدمات ..."
+
+#: .\home\templates\includes\services.html:37
+msgid "All services"
+msgstr "كل الخدمات"
 
 #: .\home\templates\registration\login.html:36
 msgid "Username and password didn\"t match. Please try again."

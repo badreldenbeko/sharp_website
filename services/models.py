@@ -3,7 +3,7 @@ from django.db import models
 from django.db.models.signals import pre_save
 from django.urls import reverse
 from ckeditor.fields import RichTextField
-from sharp.utls import unique_slug_generator, upload_location
+from sharp.utls import unique_slug_generator, upload_location, get_video_name
 
 
 # Create your models here.
@@ -91,6 +91,27 @@ def pre_save_service_post_receiver(sender, instance, *args, **kwargs):
 
 
 pre_save.connect(pre_save_service_post_receiver, sender=ServicePost)
+
+
+class ServicePostVideo(models.Model):
+    post = models.ForeignKey(ServicePost, on_delete=models.CASCADE, related_name='videos')
+    link = models.URLField()
+    video = models.CharField(max_length=250, blank=True, null=True)
+    en_video_name = models.CharField(max_length=250)
+    ar_video_name = models.CharField(max_length=250)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.en_video_name
+
+
+def pre_save_service_post_video_receiver(sender, instance, *args, **kwargs):
+    if not instance.video:
+        instance.video = get_video_name(instance)
+
+
+pre_save.connect(pre_save_service_post_video_receiver, sender=ServicePostVideo)
 
 
 class ServicePostComment(models.Model):

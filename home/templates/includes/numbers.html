@@ -1,0 +1,65 @@
+{% load staticfiles %}
+{% load i18n %}
+<!-- Numbers -->
+<div id="numbers" class="section sm-padding">
+
+    <!-- Background Image -->
+    <div class="bg-img" style="background-image: url('{% static 'home/image/background2.jpg' %}');">
+        <div class="overlay"></div>
+    </div>
+    <!-- /Background Image -->
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Row -->
+        <div class="row">
+
+            <!-- number -->
+            <div class="col-sm-3 col-xs-6">
+                <div class="number">
+                    <i class="fa fa-users"></i>
+                    <h3 class="white-text"><span class="counter">{{ clients.count }}</span></h3>
+                    <span class="white-text">{% trans 'Our Clients' %}</span>
+                </div>
+            </div>
+            <!-- /number -->
+
+            <!-- number -->
+            <div class="col-sm-3 col-xs-6">
+                <div class="number">
+                    <i class="fa fa-server"></i>
+                    <h3 class="white-text"><span class="counter">{{ services.count }}</span></h3>
+                    <span class="white-text">{% trans 'Total Services' %}</span>
+                </div>
+            </div>
+            <!-- /number -->
+
+            <!-- number -->
+            <div class="col-sm-3 col-xs-6">
+                <div class="number">
+                    <i class="fa fa-coffee"></i>
+                    <h3 class="white-text"><span class="counter">154</span>K</h3>
+                    <span class="white-text">{% trans 'Cups of Coffee' %}</span>
+                </div>
+            </div>
+            <!-- /number -->
+
+            <!-- number -->
+            <div class="col-sm-3 col-xs-6">
+                <div class="number">
+                    <i class="fa fa-file"></i>
+                    <h3 class="white-text"><span class="counter">{{ clients.count }}</span></h3>
+                    <span class="white-text">{% trans 'Projects completed' %}</span>
+                </div>
+            </div>
+            <!-- /number -->
+
+        </div>
+        <!-- /Row -->
+
+    </div>
+    <!-- /Container -->
+
+</div>
+<!-- /Numbers -->

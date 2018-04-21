@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-20 04:00+0200\n"
+"POT-Creation-Date: 2018-04-21 15:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,15 +21,15 @@ msgstr ""
 
 #: .\contacts\templates\contacts\delete.html:14
 msgid "Are you sure You want to delete contact"
-msgstr ""
+msgstr "هل تريد حذف جهة اتصال"
 
 #: .\contacts\templates\contacts\delete.html:15
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: .\contacts\templates\contacts\delete.html:17
 msgid "Cancel"
-msgstr ""
+msgstr "الغاء"
 
 #: .\contacts\templates\contacts\edit.html:12
 #: .\contacts\templates\contacts\list.html:12
@@ -37,10 +37,8 @@ msgid "Contacts"
 msgstr "جهات الاتصال"
 
 #: .\contacts\templates\contacts\edit.html:17
-#, fuzzy
-#| msgid "Contacts"
 msgid "All contacts"
-msgstr "جهات الاتصال"
+msgstr "جميع جهات الاتصال"
 
 #: .\contacts\templates\contacts\edit.html:27
 #: .\contacts\templates\contacts\list.html:49
@@ -50,7 +48,7 @@ msgstr "جهة اتصال"
 #: .\contacts\templates\contacts\edit.html:28
 #: .\contacts\templates\contacts\list.html:55
 msgid "Email"
-msgstr ""
+msgstr "بريد الكترونى"
 
 #: .\contacts\templates\contacts\edit.html:29
 #: .\contacts\templates\contacts\list.html:58
@@ -59,27 +57,27 @@ msgstr "انشىء فى"
 
 #: .\contacts\templates\contacts\edit.html:30
 msgid "Last update"
-msgstr ""
+msgstr "اخر تحديث"
 
 #: .\contacts\templates\contacts\edit.html:35
 msgid "Save"
-msgstr ""
+msgstr "حفظ"
 
 #: .\contacts\templates\contacts\list.html:34
 msgid "Filters"
-msgstr ""
+msgstr "مرشحات"
 
 #: .\contacts\templates\contacts\list.html:37
 msgid "All"
-msgstr ""
+msgstr "الكل"
 
 #: .\contacts\templates\contacts\list.html:40
 msgid "Replayed"
-msgstr ""
+msgstr "تم الرد"
 
 #: .\contacts\templates\contacts\list.html:43
 msgid "Not replayed"
-msgstr ""
+msgstr "لم يتم الرد"
 
 #: .\contacts\templates\contacts\list.html:48
 msgid "Total"
@@ -91,11 +89,7 @@ msgstr "الاسم"
 
 #: .\contacts\templates\contacts\list.html:56
 msgid "Subject"
-msgstr ""
-
-#: .\contacts\templates\contacts\list.html:57
-msgid "Replyed"
-msgstr ""
+msgstr "موضوع"
 
 #: .\contacts\templates\contacts\list.html:69
 msgid "Ago"

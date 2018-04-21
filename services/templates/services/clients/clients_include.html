@@ -21,7 +21,8 @@
             {% for client in service.clients.all %}
                 <div class="item">
                     <div class="col-md-6 text-center" style="margin-top: 20px;">
-                        <img style="max-width: 170px" src=" {% if client.logo %}{{ client.logo.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}" alt="{{ client.en_client_name }}"/>
+                        <div class="row {% if request.LANGUAGE_CODE == 'ar' %}text-right{% else %}text-left{% endif %}"><a class="text-danger" href="{% url 'client:delete' client.slug %}"><i class="fa fa-trash"></i> {% trans 'Delete' %}</a></div>
+                        <div class="row"><img style="max-width: 170px" src=" {% if client.logo %}{{ client.logo.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}" alt="{{ client.en_client_name }}"/></div>
                     </div>
                 </div>
             {% empty %}

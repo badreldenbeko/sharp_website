@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from ckeditor.widgets import CKEditorWidget
-from .models import Service, ServiceClient, ServicePost, ServicePostComment, ServicePrice
+from .models import Service, ServiceClient, ServicePost, ServicePostVideo, ServicePostComment, ServicePrice
 
 
 class ServiceForm(forms.ModelForm):
@@ -23,6 +23,13 @@ class ServicePostForm(forms.ModelForm):
     class Meta:
         model = ServicePost
         fields = ['en_title', 'ar_title', 'en_body', 'ar_body', 'image']
+
+
+class ServicePostVideoForm(forms.ModelForm):
+    class Meta:
+        model = ServicePostVideo
+        fields = ['en_video_name', 'ar_video_name', 'link']
+
 
 
 class ServicePostCommentForm(forms.ModelForm):

@@ -43,7 +43,7 @@
 
     <div id="blog" class="section md-padding">
         <!-- Row -->
-        <div class="row">
+        <div class="container-fluid">
             <!-- Main -->
             <div class="container">
                 <div class="row">
@@ -58,9 +58,62 @@
                             {{ post.en_body|safe }}{% endif %}</p>
                     </div>
                 </div>
-                <!-- blog comments -->
+            </div>
+            <!-- /Main -->
+
+
+            <!-- Videos -->
+            <div class="container">
+                <br>
+                <!-- Section header -->
+                {% if post.videos.all %}
+                    <div class="section-header text-center">
+                        <h2 class="title">{% trans 'Videos' %}</h2>
+                    </div>
+                {% endif %}
+                <!-- /Section header -->
+
+                <!-- Video -->
+                {% if request.user.is_authenticated %}
+                    <div class="container-fluid">
+                        <button data-toggle="modal" data-target="#postVideoFormModal" class="main-btn"><i
+                                class="fa fa-file-video-o"></i> {% trans 'Add video' %}</button>
+                        {% include 'services/videos/modal.html' %}
+                    </div>
+                {% endif %}
+                <div class="col-md-6 col-md-offset-3">
+                    <ul class="nav nav-tabs" role="tablist">
+                        {% for video in post.videos.all %}
+                            <li role="presentation" class="{% if forloop.first %}active{% endif %}">
+                                <a href="#{{ video.video }}" aria-controls="{{ video.video }}" role="tab"
+                                        data-toggle="tab">{{ video.en_video_name }}</a>
+                            </li>
+                        {% empty %}
+                        {% endfor %}
+                    </ul>
+                    <div class="tab-content">
+                        {% for video in post.videos.all %}
+                            <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}"
+                                 id="{{ video.video }}"><br>
+                                <a href="{% url 'video:delete' video.pk %}" class="text-danger"><i
+                                        class="fa fa-trash"></i> {% trans 'Delete' %}</a><br>
+                                <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/{{ video.video }}"
+                                        frameborder="0" allow="autoplay; encrypted-media"
+                                        allowfullscreen></iframe>
+                            </div>
+                        {% empty %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- Videos -->
+
+
+            <!-- blog comments -->
+            <div class="container">
                 <div class="blog-comments">
-                    {% if post.comments %}
+                    {% if post.comments.all %}
                         <h3 class="title">({{ post.comments.count }}) Comment{{ post.comments.count|pluralize }}</h3>
                     {% endif %}
                     {% for comment in post.comments.all %}
@@ -95,9 +148,13 @@
                     {% endfor %}
                 </div>
             </div>
+            <!-- /blog comments -->
         </div>
+        <!-- /Row -->
         <br>
     </div>
+
+
 {% endblock %}
 
 {% block js %}

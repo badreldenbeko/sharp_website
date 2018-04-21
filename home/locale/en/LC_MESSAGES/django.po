@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-20 04:00+0200\n"
+"POT-Creation-Date: 2018-04-21 15:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,11 +35,11 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: .\home\templates\home\home.html:16
+#: .\home\templates\includes\abou.html:8
 msgid "Why Choose Sharp4IT"
 msgstr ""
 
-#: .\home\templates\home\home.html:18
+#: .\home\templates\includes\abou.html:10
 msgid ""
 "Sharp4IT is leading a new concept in the market; we are a Technology system "
 "integrator company that offers a wide range of technology to business "
@@ -50,44 +50,27 @@ msgid ""
 "public sector."
 msgstr ""
 
-#: .\home\templates\home\home.html:110
-#: .\home\templates\includes\nav-bar.html:32
-msgid "Our Services"
-msgstr ""
-
-#: .\home\templates\home\home.html:123
-msgid "Read more"
-msgstr ""
-
-#: .\home\templates\home\home.html:128
-msgid "No services published ..."
-msgstr ""
-
-#: .\home\templates\home\home.html:134
-msgid "All services"
-msgstr ""
-
-#: .\home\templates\home\home.html:160
+#: .\home\templates\includes\contact_us.html:9
 msgid "Get in touch"
 msgstr ""
 
-#: .\home\templates\home\home.html:167
+#: .\home\templates\includes\contact_us.html:16
 msgid "Phone"
 msgstr ""
 
-#: .\home\templates\home\home.html:177
+#: .\home\templates\includes\contact_us.html:26
 msgid "Email"
 msgstr ""
 
-#: .\home\templates\home\home.html:186
+#: .\home\templates\includes\contact_us.html:35
 msgid "Address"
 msgstr ""
 
-#: .\home\templates\home\home.html:187
+#: .\home\templates\includes\contact_us.html:36
 msgid "7, Ewais, Mansheya El-Bakry, Heliopolis, Cairo Governorate"
 msgstr ""
 
-#: .\home\templates\home\home.html:199
+#: .\home\templates\includes\contact_us.html:48
 msgid "Send message"
 msgstr ""
 
@@ -97,6 +80,11 @@ msgstr ""
 
 #: .\home\templates\includes\nav-bar.html:29
 msgid "About"
+msgstr ""
+
+#: .\home\templates\includes\nav-bar.html:32
+#: .\home\templates\includes\services.html:13
+msgid "Our Services"
 msgstr ""
 
 #: .\home\templates\includes\nav-bar.html:34
@@ -124,6 +112,34 @@ msgstr ""
 #: .\home\templates\registration\login.html:33
 #: .\home\templates\registration\login.html:46
 msgid "Login"
+msgstr ""
+
+#: .\home\templates\includes\numbers.html:23
+msgid "Our Clients"
+msgstr ""
+
+#: .\home\templates\includes\numbers.html:33
+msgid "Total Services"
+msgstr ""
+
+#: .\home\templates\includes\numbers.html:43
+msgid "Cups of Coffee"
+msgstr ""
+
+#: .\home\templates\includes\numbers.html:53
+msgid "Projects completed"
+msgstr ""
+
+#: .\home\templates\includes\services.html:26
+msgid "Read more"
+msgstr ""
+
+#: .\home\templates\includes\services.html:31
+msgid "No services published ..."
+msgstr ""
+
+#: .\home\templates\includes\services.html:37
+msgid "All services"
 msgstr ""
 
 #: .\home\templates\registration\login.html:36

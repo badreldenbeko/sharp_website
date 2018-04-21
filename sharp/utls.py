@@ -44,3 +44,9 @@ def upload_location(instance, filename):
 
 def get_filename(filename):
     return filename.upper()
+
+
+def get_video_name(instance):
+    video_n = instance.link.split('=')[1]
+    video = video_n.split('&')[0]
+    return video

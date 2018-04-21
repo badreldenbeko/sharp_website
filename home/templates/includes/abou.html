@@ -1,0 +1,23 @@
+{% load staticfiles %}
+{% load i18n %}
+<!-- why choose us content -->
+<div id="about" class="section md-padding bg-grey">
+    <div class="container">
+        <div class="col-md-6">
+            <div class="section-header">
+                <h2 class="title">{% trans 'Why Choose Sharp4IT' %}</h2>
+            </div>
+            <p>{% trans 'Sharp4IT is leading a new concept in the market; we are a Technology system integrator company that offers a wide range of technology to business consultation services covering the whole business lifecycle. From the company"s head office in Cairo-Egypt and a dedicated team of business analysis experts and technology consultants assisted by marketing and sales professionals offering an extensive portfolio for private sector corporates, public sector.' %}</p>
+        </div>
+        <!-- /why choose us content -->
+
+        <!-- About slider -->
+        <div class="col-md-6">
+            <div id="about-slider" class="owl-carousel owl-theme">
+                <img class="img-responsive" src="{% static 'home/image/about1.jpg' %}" alt="">
+                <img class="img-responsive" src="{% static 'home/image/about2.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /About slider -->

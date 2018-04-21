@@ -33,6 +33,8 @@ urlpatterns = i18n_patterns(
     path('comment/', include('services.comment_urls', namespace='comment')),
     path('price/', include('services.pricing-urls', namespace='price')),
     path('contact/', include('contacts.urls', namespace='contact')),
+    path('video/', include('services.video_urls', namespace='video')),
+    path('client/', include('services.clients_urls', namespace='client')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('', include('home.urls', namespace='home')),
 )

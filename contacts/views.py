@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 from .forms import ContactReplayForm
 from .models import Contact
+from services.models import Service
 
 
 # Create your views here.
@@ -11,6 +12,7 @@ from .models import Contact
 def contact_list(request):
     contacts = Contact.objects.all()
     query = request.GET.get('query')
+    services = Service.objects.all()
     replayed = request.GET.get('replayed')
     if query:
         contacts = contacts.filter(Q(name__icontains=query) | Q(email__contains=query))
@@ -26,7 +28,7 @@ def contact_list(request):
         contacts = contacts.filter(Q(replayed=False))
         if query:
             contacts = contacts.filter(Q(name__icontains=query) | Q(email__contains=query))
-    return render(request, 'contacts/list.html', {'contacts': contacts})
+    return render(request, 'contacts/list.html', {'contacts': contacts, 'services': services})
 
 
 @login_required

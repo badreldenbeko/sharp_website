@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 
-from .models import Service, ServicePost, ServicePrice
+from .models import Service, ServiceClient, ServicePost, ServicePostVideo, ServicePrice
 
 
 # Register your models here.
@@ -27,3 +27,9 @@ class ServicePriceAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ServicePrice, ServicePriceAdmin)
+
+
+admin.site.register(ServicePostVideo)
+
+
+admin.site.register(ServiceClient)
