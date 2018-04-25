@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import OdooApps
 from .forms import AppsForm
 
@@ -12,3 +12,11 @@ def app_list(request):
             app_form.save()
             return redirect('odoo-apps:list')
     return render(request, 'apps/list.html', {'apps': apps, 'app_form': app_form})
+
+
+def app_delete(request, slug):
+    app = get_object_or_404(OdooApps, slug=slug)
+    if request.method == 'POST':
+        app.delete()
+        return redirect('odoo-apps:list')
+    return render(request, 'apps/delete.html', {'app': app})
