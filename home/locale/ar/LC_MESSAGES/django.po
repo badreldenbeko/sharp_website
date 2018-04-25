@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 20:56+0200\n"
+"POT-Creation-Date: 2018-04-25 05:14+0200\n"
 "PO-Revision-Date: 2018-03-31 13:15+0000\n"
 "Last-Translator: b'  <badrelden@sharp4it.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,18 +103,22 @@ msgid "Pricing"
 msgstr "خطط الاسعار"
 
 #: .\home\templates\includes\nav-bar.html:46
+msgid "Odoo apps"
+msgstr "تطبيقات اودو"
+
+#: .\home\templates\includes\nav-bar.html:49
 msgid "Contact Us"
 msgstr "أتصل بنا"
 
-#: .\home\templates\includes\nav-bar.html:49
+#: .\home\templates\includes\nav-bar.html:52
 msgid "Contacts"
 msgstr "جهات الاتصال"
 
-#: .\home\templates\includes\nav-bar.html:50
+#: .\home\templates\includes\nav-bar.html:53
 msgid "Logout"
 msgstr "تسجيل الخروج"
 
-#: .\home\templates\includes\nav-bar.html:53
+#: .\home\templates\includes\nav-bar.html:56
 #: .\home\templates\registration\login.html:7
 #: .\home\templates\registration\login.html:33
 #: .\home\templates\registration\login.html:46

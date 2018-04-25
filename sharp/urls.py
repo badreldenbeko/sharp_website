@@ -35,6 +35,7 @@ urlpatterns = i18n_patterns(
     path('contact/', include('contacts.urls', namespace='contact')),
     path('video/', include('services.video_urls', namespace='video')),
     path('client/', include('services.clients_urls', namespace='client')),
+    path('odoo-apps/', include('odoo_apps.urls', namespace='odoo-apps')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('', include('home.urls', namespace='home')),
 )

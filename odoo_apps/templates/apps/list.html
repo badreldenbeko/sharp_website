@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Odoo apps' %}
+{% endblock %}
+
+{% block content %}
+    <div class="section md-padding">
+        {% if request.user.is_authenticated %}
+            <div class="container">
+                <button data-toggle="modal" data-target="#appFormModal" class="btn btn-primary"><i
+                        class="fa fa-plus"></i> {% trans 'Add App' %}</button>
+            </div>
+            <br>
+            {% include 'apps/modal.html' %}
+        {% endif %}
+        <div class="container">
+            <h3>{% trans 'Odoo apps' %}</h3>
+            <div class="row">
+                {% for app in apps %}
+                    <div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-diamond"></i>
+						<h3>{% if request.LANGUAGE_CODE == 'ar' %}
+                            {{ app.ar_app_name }}
+						{% else %}
+                            {{ app.en_app_name }}
+						{% endif %}</h3>
+                        <img class="img-responsive" src="{% if app.image %}{{ app.image.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}"/><br>
+						<a href="{{ app.app_url }}" target="_blank">{% trans 'Get app' %}</a>
+					</div>
+				</div>
+                {% empty %}
+                    <p class="text-muted">{% trans 'No apps add ...' %}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
