@@ -1,0 +1,105 @@
+/**/
+a:link {
+    color: #EB5E51;
+}
+
+a:visited {
+    color: gray !important;
+}
+
+/* header */
+#header {
+    background-color: rgba(225, 86, 74, 0.1);
+    border-bottom: 2px solid #EB5E51;
+}
+
+/**/
+.dashboard #content {
+    width: 72%;
+}
+
+#header #branding h1 a {
+    color: #EB5E51;
+}
+
+#header #user-tools, #header #user-tools a {
+    color: #EB5E51;
+}
+
+/* Caption */
+.module h2, .module caption, .inline-group h2 {
+    background-color: #EB5E51;
+}
+
+/* tbody */
+tbody {
+    background-color: rgba(225, 86, 74, 0.1);
+}
+
+/* content-related */
+#content-related .module h2 {
+    background-color: #EB5E51;
+    color: white;
+}
+
+#content-related .module {
+    background-color: rgba(225, 86, 74, 0.1);
+}
+
+/* breadcrumbs */
+div.breadcrumbs {
+    color: gray;
+    background-color: rgba(225, 86, 74, 0.1);
+}
+
+div.breadcrumbs a, div.breadcrumbs a:focus, div.breadcrumbs a:hover {
+    color: #EB5E51 !important;
+}
+
+/* object-tools */
+.object-tools a:hover {
+    background-color: #EB5E51;
+}
+
+#content-main .object-tools li a:link, a:visited {
+    color: white;
+}
+
+/* toolbar */
+#changelist #toolbar {
+    background-color: rgba(225, 86, 74, 0.1) !important;
+}
+
+/* paginator */
+#changelist .paginator {
+    border-bottom: 1px solid rgba(225, 86, 74, 0.1) !important;
+}
+
+.paginator {
+    border-top: 1px solid #EB5E51 !important;
+}
+
+/* parler-language-tabs */
+.parler-language-tabs {
+    border-bottom: 2px solid #EB5E51 !important;
+}
+
+.parler-language-tabs span.current {
+    background-color: #EB5E51 !important;
+    border-color: #EB5E51 !important;
+}
+
+/* input */
+input[type="button"], .submit-row input, a.button {
+    background: rgba(225, 86, 74, 0.1) !important;
+    color: #EB5E51;
+}
+
+.button.default, input[type="submit"].default, .submit-row input.default {
+    background: #EB5E51 !important;
+    color: white;
+}
+
+.submit-row a.deletelink {
+    color: white !important;
+}
