@@ -95,8 +95,10 @@
                         {% for video in post.videos.all %}
                             <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}"
                                  id="{{ video.video }}"><br>
+                                {% if request.user.is_authenticated %}
                                 <a href="{% url 'video:delete' video.pk %}" class="text-danger"><i
                                         class="fa fa-trash"></i> {% trans 'Delete' %}</a><br>
+                                {% endif %}
                                 <iframe width="560" height="315"
                                         src="https://www.youtube.com/embed/{{ video.video }}"
                                         frameborder="0" allow="autoplay; encrypted-media"

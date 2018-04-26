@@ -43,7 +43,7 @@
                 <a href="{% if section != 'home' %}/{{ request.LANGUAGE_CODE }}/{% endif %}#pricing">{% trans 'Pricing' %}</a>
             </li>
             <li>
-                <a href="{% if section != 'home' %}/{{ request.LANGUAGE_CODE }}/{% endif %}{% url 'odoo-apps:list' %}">{% trans 'Odoo apps' %}</a>
+                <a href="{% url 'odoo-apps:list' %}">{% trans 'Odoo apps' %}</a>
             </li>
             <li>
                 <a href="{% if section != 'home' %}/{{ request.LANGUAGE_CODE }}/{% endif %}#contact">{% trans 'Contact Us' %}</a>

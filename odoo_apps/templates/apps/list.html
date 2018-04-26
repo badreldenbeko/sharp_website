@@ -32,6 +32,8 @@
                                 <div class="text-{% if request.LANGUAGE_CODE == 'ar' %}left{% else %}right{% endif %}">
                                     <small><a href="{% url 'odoo-apps:delete' app.slug %}" class="text-danger">{% trans 'Delete' %} <span
                                             class="fa fa-trash"></span></a></small>
+                                <small><a href="{% url 'odoo-apps:update' app.slug %}" class="text-warning">{% trans 'Update' %} <span
+                                            class="fa fa-edit"></span></a></small>
                                 </div>
                             {% endif %}
                             <img class="img-responsive" src="
