@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'sharp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sharp_website',
-        'USER': 'django',
-        'PASSWORD': 'allahh',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
     }
 }
 
@@ -177,8 +177,8 @@ CKEDITOR_CONFIGS = {
         ],
     },
 }
-EMAIL_HOST = 'mail.sharp4it.com'
-EMAIL_HOST_USER = 'badrelden@sharp4it.com'
-EMAIL_HOST_PASSWORD = 'allahh'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# EMAIL_HOST = 'mail.sharp4it.com'
+# EMAIL_HOST_USER = 'badrelden@sharp4it.com'
+# EMAIL_HOST_PASSWORD = 'allahh'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
