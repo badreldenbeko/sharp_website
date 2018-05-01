@@ -6,6 +6,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# FACEBOOK #}
+    <meta property="og:url" content="http://www.sharp4it.com{{ request.path }}"/>
+    <meta property="og:type" content="Soft ware Development"/>
+    <meta property="og:title" content="ShARP4IT"/>
+    <meta property="og:description" content="Busniess Solutions"/>
+    <meta property="og:image"
+          content="http://www.sharp4it.com{% static 'home/image/Business-Performance-background.jpg' %}"/>
+    {# END FACEBOOK #}
     <title>{% trans 'Sharp4IT' %} | {% block title %}{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
@@ -21,6 +29,17 @@
     {% block css %}{% endblock %}
 </head>
 <body>
+<div id="fb-root"></div>
+{# FACEBOOK #}
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=581692858849389&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{# END FACEBOOK #}
 <header {% if section == 'home' %}id="home"{% endif %}>
     {% if section == 'home' %}
         <!-- Background Image -->

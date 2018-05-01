@@ -11,7 +11,7 @@
             <div class="row">
                 <form method="post">
                     {% csrf_token %}
-                    <h5>{% trans 'Are you sure You want to delete client' %}
+                    <h5>{% trans 'Are you sure You want to delete application' %}
                         {% if request.LANGUAGE_CODE == 'ar' %}{{ app.ar_app_name }}{% else %}{{ app.en_app_name }}{% endif %}</h5>
                     <input class="btn btn-danger" type="submit" value="{% trans 'Delete' %}">
                     <a class="btn btn-default"

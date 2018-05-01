@@ -4,7 +4,8 @@
 {% load i18n %}
 
 {% block title %}
-    post
+    {% if request.LANGUAGE_CODE == 'ar' %}{% with post.ar_title as ar_name %}{{ ar_name }}{% endwith %}{% else %}
+        {% with post.en_title as en_name %}{{ en_name }}{% endwith %}{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -52,10 +53,18 @@
                 {% if post.image %}{{ post.image.url }}{% else %}{% static 'services/image/blog1.jpg' %}{% endif %}"/>
                     </div>
                     <div class="text-justify col-md-6">
-                        <h3>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_title }}{% else %}
-                            {{ post.en_title }}{% endif %}</h3>
-                        <p>{% if request.LANGUAGE_CODE == 'ar' %}{{ post.ar_body|safe }}{% else %}
-                            {{ post.en_body|safe }}{% endif %}</p>
+                        <h3>{% if request.LANGUAGE_CODE == 'ar' %}{% with post.ar_title as ar_name %}{{ ar_name }}
+                        {% endwith %}{% else %}
+                            {% with post.en_title as en_name %}{{ en_name }}{% endwith %}{% endif %}</h3>
+                        <p>{% if request.LANGUAGE_CODE == 'ar' %}{% with post.ar_body as ar_description %}
+                            {{ ar_description|safe }}{% endwith %}{% else %}
+                            {% with post.en_body as en_description %}
+                                {{ en_description|safe }}{% endwith %}{% endif %}</p>
+                        <div class="fb-share-button" data-href="http://www.sharp4it.com{{ request.path }}"
+                             data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank"
+                                                                                                 href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sharp4it.com{{ request.path }}%2F&amp;src=sdkpreparse"
+                                                                                                 class="fb-xfbml-parse-ignore">{% trans 'Share' %}</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,7 +95,7 @@
                         {% for video in post.videos.all %}
                             <li role="presentation" class="{% if forloop.first %}active{% endif %}">
                                 <a href="#{{ video.video }}" aria-controls="{{ video.video }}" role="tab"
-                                        data-toggle="tab">{{ video.en_video_name }}</a>
+                                   data-toggle="tab">{{ video.en_video_name }}</a>
                             </li>
                         {% empty %}
                         {% endfor %}
@@ -96,8 +105,8 @@
                             <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}"
                                  id="{{ video.video }}"><br>
                                 {% if request.user.is_authenticated %}
-                                <a href="{% url 'video:delete' video.pk %}" class="text-danger"><i
-                                        class="fa fa-trash"></i> {% trans 'Delete' %}</a><br>
+                                    <a href="{% url 'video:delete' video.pk %}" class="text-danger"><i
+                                            class="fa fa-trash"></i> {% trans 'Delete' %}</a><br>
                                 {% endif %}
                                 <iframe width="560" height="315"
                                         src="https://www.youtube.com/embed/{{ video.video }}"

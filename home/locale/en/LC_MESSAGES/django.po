@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-25 05:44+0200\n"
+"POT-Creation-Date: 2018-05-01 16:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\home\templates\base.html:9 .\home\templates\base.html:45
+#: .\home\templates\base.html:17 .\home\templates\base.html:64
 msgid "Sharp4IT"
 msgstr ""
 
-#: .\home\templates\base.html:46
+#: .\home\templates\base.html:65
 msgid "We will have the answer to all your inquiries"
 msgstr ""
 
-#: .\home\templates\base.html:48
+#: .\home\templates\base.html:67
 msgid "We will arrange your company to control your business resources"
 msgstr ""
 

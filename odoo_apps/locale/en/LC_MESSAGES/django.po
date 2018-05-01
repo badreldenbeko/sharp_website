@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-25 05:44+0200\n"
+"POT-Creation-Date: 2018-05-01 16:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,10 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\odoo_apps\templates\apps\delete.html:14
-msgid "Are you sure You want to delete app"
+msgid "Are you sure You want to delete application"
 msgstr ""
 
-#: .\odoo_apps\templates\apps\delete.html:17
+#: .\odoo_apps\templates\apps\delete.html:16
 #: .\odoo_apps\templates\apps\list.html:33
 msgid "Delete"
 msgstr ""
@@ -40,11 +40,15 @@ msgstr ""
 msgid "Add App"
 msgstr ""
 
-#: .\odoo_apps\templates\apps\list.html:39
+#: .\odoo_apps\templates\apps\list.html:35
+msgid "Update"
+msgstr ""
+
+#: .\odoo_apps\templates\apps\list.html:41
 msgid "Get app"
 msgstr ""
 
-#: .\odoo_apps\templates\apps\list.html:43
+#: .\odoo_apps\templates\apps\list.html:45
 msgid "No apps add ..."
 msgstr ""
 
@@ -57,5 +61,11 @@ msgid "Close"
 msgstr ""
 
 #: .\odoo_apps\templates\apps\modal.html:21
+#: .\odoo_apps\templates\apps\update.html:22
 msgid "Save"
+msgstr ""
+
+#: .\odoo_apps\templates\apps\update.html:7
+#: .\odoo_apps\templates\apps\update.html:14
+msgid "Update App"
 msgstr ""
