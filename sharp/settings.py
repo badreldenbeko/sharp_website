@@ -40,10 +40,13 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'rosetta',
+    'ckeditor',
+    'ckeditor_uploader',
     # My apps
     'home',
     'services',
     'contacts',
+    'odoo_apps',
 ]
 
 MIDDLEWARE = [
@@ -84,10 +87,10 @@ WSGI_APPLICATION = 'sharp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': '',
-        # 'USER': '',
-        # 'PASSWORD': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sharp_website',
+        'USER': 'django',
+        'PASSWORD': 'allahh',
     }
 }
 
@@ -159,8 +162,23 @@ PARLER_LANGUAGES = {
     }
 }
 
-# EMAIL_HOST = ''
-# EMAIL_HOST_USER = ''
-# EMAIL_HOST_PASSWORD = ''
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor"
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_FILENAME_GENERATOR = 'utls.get_filename'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter',
+             'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ],
+    },
+}
+EMAIL_HOST = 'mail.sharp4it.com'
+EMAIL_HOST_USER = 'badrelden@sharp4it.com'
+EMAIL_HOST_PASSWORD = 'allahh'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
