@@ -8,7 +8,7 @@ django-rosetta==0.8.1
 idna==2.6
 microsofttranslator==0.8
 mysqlclient==1.3.12
-Pillow==5.1.0
+Pillow==8.2.0
 polib==1.1.0
 pytz==2018.3
 requests==2.18.4
